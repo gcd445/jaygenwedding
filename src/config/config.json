@@ -1,48 +1,45 @@
 {
   "coupleNames": "Jay & Gen",
-  "weddingDate": "April 20, 2026",
-  "location": "Silang, Cavite",
+  "weddingDate": "2026-04-28T13:00:00+08:00",
+  "location": "St. Benedict Parish & Alta Veranda de Tibig, Silang, Cavite",
   "email": "your-email@example.com",
   "phone": "+63 912 345 6789",
-  "heroImage": "https://placehold.co/1200x600?text=Jay+%26+Gen",
+  "heroImage": "meta/Invitation1b.jpg",
   "gallery": [
-    "https://placehold.co/400x300?text=Photo+1",
-    "https://placehold.co/400x300?text=Photo+2",
-    "https://placehold.co/400x300?text=Photo+3"
+    "meta/Invitation1b.jpg",
+    "meta/Invitation3b.jpg"
   ],
   "faq": [
     {
-      "question": "Can I bring my kids?",
-      "answer": "No, we kindly ask that this be an adults-only event to ensure everyone’s comfort and enjoyment."
+      "question": "What is the dress code?",
+      "answer": "Formal attire. Gentlemen: Beige barong with black slacks. Ladies: Long, flowy gowns or dresses. Preferred colors: blush, mauve, peach, yellow, and beige."
     },
     {
-      "question": "What’s the dress code?",
-      "answer": "Formal attire is requested. Please dress elegantly to celebrate this special occasion with us."
+      "question": "How do I RSVP?",
+      "answer": "Please RSVP by 28 February 2026 via Facebook Messenger."
     },
     {
-      "question": "Is there parking?",
-      "answer": "Yes, there is ample parking available at the venue for all guests."
+      "question": "What about gifts?",
+      "answer": "Your presence is the best gift. If you would like to bless our new start, a small envelope for our future would warm our heart."
     }
   ],
   "venue": {
-    "name": "The Grand Ballroom, Silang",
-    "address": "123 Main St, Silang, Cavite, Philippines",
-    "mapLink": "https://maps.google.com/?q=The+Grand+Ballroom+Silang",
+    "name": "St. Benedict Parish",
+    "address": "Ayala Westgrove Heights, South Boulevard, Silang, Cavite",
+    "mapLink": "https://maps.google.com/?q=St.+Benedict+Parish+Silang+Cavite",
     "hotels": [
-      "Hotel A, 456 Main St",
-      "Hotel B, 789 Main St"
+      "Alta Veranda de Tibig - Plaza Guevarra, Aldaba St. Brgy. Tibig, Silang, Cavite"
     ]
   },
   "schedule": [
-    { "time": "3:00 PM", "title": "Ceremony", "location": "The Grand Ballroom" },
-    { "time": "5:00 PM", "title": "Reception", "location": "Reception Hall" },
-    { "time": "8:00 PM", "title": "After-Party", "location": "After-Party Spot" }
+    { "time": "1:00 PM", "title": "Ceremony", "location": "St. Benedict Parish" },
+    { "time": "Reception to follow", "title": "Reception", "location": "Alta Veranda de Tibig - Plaza Guevarra" }
   ],
-  "registryLink": "https://example.com/registry",
+  "registryLink": "",
   "rsvp": {
     "enabled": true,
     "maxGuests": 5,
-    "notesPlaceholder": "Dietary notes or special requests"
+    "notesPlaceholder": "Let us know any dietary notes or special requests"
   },
-  "footerNote": "Made with ❤️ for our special day"
+  "footerNote": "With love and gratitude"
 }
