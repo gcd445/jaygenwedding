@@ -35,7 +35,7 @@ const props = withDefaults(defineProps<Props>(), {
   pressure: 0.1,
   pressureIterations: 20,
   curl: 3,
-  splatRadius: 0.2,
+  splatRadius: 0.12,
   splatForce: 6000,
   shading: true,
   colorUpdateSpeed: 10,
@@ -55,6 +55,10 @@ interface Pointer {
   moved: boolean
   color: ColorRGB
 }
+
+const gradientStart: ColorRGB = { r: 81 / 255, g: 39 / 255, b: 49 / 255 }
+const gradientEnd: ColorRGB = { r: 20 / 255, g: 20 / 255, b: 20 / 255 }
+let gradientProgress = 0
 
 function pointerPrototype(): Pointer {
   return {
@@ -957,6 +961,7 @@ onMounted(() => {
     colorUpdateTimer += dt * config.COLOR_UPDATE_SPEED
     if (colorUpdateTimer >= 1) {
       colorUpdateTimer = wrap(colorUpdateTimer, 0, 1)
+      gradientProgress = wrap(gradientProgress + 0.05, 0, 1)
       pointers.forEach(p => {
         p.color = generateColor()
       })
@@ -1215,56 +1220,17 @@ onMounted(() => {
   }
 
   function generateColor(): ColorRGB {
-    const c = HSVtoRGB(Math.random(), 1.0, 1.0)
-    c.r *= 0.15
-    c.g *= 0.15
-    c.b *= 0.15
-    return c
+    return lerpColor(gradientProgress)
   }
 
-  function HSVtoRGB(h: number, s: number, v: number): ColorRGB {
-    let r = 0
-    let g = 0
-    let b = 0
-    const i = Math.floor(h * 6)
-    const f = h * 6 - i
-    const p = v * (1 - s)
-    const q = v * (1 - f * s)
-    const t = v * (1 - (1 - f) * s)
-
-    switch (i % 6) {
-      case 0:
-        r = v
-        g = t
-        b = p
-        break
-      case 1:
-        r = q
-        g = v
-        b = p
-        break
-      case 2:
-        r = p
-        g = v
-        b = t
-        break
-      case 3:
-        r = p
-        g = q
-        b = v
-        break
-      case 4:
-        r = t
-        g = p
-        b = v
-        break
-      case 5:
-        r = v
-        g = p
-        b = q
-        break
+  function lerpColor(t: number): ColorRGB {
+    const clampT = Math.min(Math.max(t, 0), 1)
+    const inv = 1 - clampT
+    return {
+      r: gradientStart.r * inv + gradientEnd.r * clampT,
+      g: gradientStart.g * inv + gradientEnd.g * clampT,
+      b: gradientStart.b * inv + gradientEnd.b * clampT
     }
-    return { r, g, b }
   }
 
   function wrap(value: number, min: number, max: number) {
