@@ -208,9 +208,9 @@ function render() {
   pointer.y += (pointer.tY - pointer.y) * 0.2
 
   // Update uniforms
-  if (mesh.program && mesh.program.uniforms) {
-    const uniforms = mesh.program.uniforms
-
+  const program = mesh.program
+  const uniforms = program?.uniforms
+  if (uniforms) {
     if (uniforms.u_time) uniforms.u_time.value = currentTime
     if (uniforms.u_pointer_position) {
       uniforms.u_pointer_position.value = [
@@ -237,7 +237,9 @@ function handlePointerMove(e: PointerEvent) {
 }
 
 function handleTouchMove(e: TouchEvent) {
-  updateMousePosition(e.touches[0].clientX, e.touches[0].clientY)
+  const touch = e.touches[0]
+  if (!touch) return
+  updateMousePosition(touch.clientX, touch.clientY)
 }
 
 function handleClick(e: MouseEvent) {
@@ -248,9 +250,9 @@ function handleClick(e: MouseEvent) {
 watch(
   () => props.hue,
   newHue => {
-    const mesh = meshRef.value
-    if (mesh && mesh.program && mesh.program.uniforms.u_hue) {
-      mesh.program.uniforms.u_hue.value = newHue
+    const hueUniform = meshRef.value?.program?.uniforms?.u_hue
+    if (hueUniform) {
+      hueUniform.value = newHue
     }
   }
 )
@@ -258,9 +260,9 @@ watch(
 watch(
   () => props.saturation,
   newSaturation => {
-    const mesh = meshRef.value
-    if (mesh && mesh.program && mesh.program.uniforms.u_saturation) {
-      mesh.program.uniforms.u_saturation.value = newSaturation
+    const saturationUniform = meshRef.value?.program?.uniforms?.u_saturation
+    if (saturationUniform) {
+      saturationUniform.value = newSaturation
     }
   }
 )
@@ -268,9 +270,9 @@ watch(
 watch(
   () => props.chroma,
   newChroma => {
-    const mesh = meshRef.value
-    if (mesh && mesh.program && mesh.program.uniforms.u_chroma) {
-      mesh.program.uniforms.u_chroma.value = newChroma
+    const chromaUniform = meshRef.value?.program?.uniforms?.u_chroma
+    if (chromaUniform) {
+      chromaUniform.value = newChroma
     }
   }
 )

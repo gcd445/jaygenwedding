@@ -56,6 +56,19 @@ interface Pointer {
   color: ColorRGB
 }
 
+interface TextureFormat {
+  internalFormat: number
+  format: number
+}
+
+interface WebGLContextExt {
+  formatRGBA: TextureFormat
+  formatRG: TextureFormat
+  formatR: TextureFormat
+  halfFloatTexType: number
+  supportLinearFiltering: boolean
+}
+
 const gradientStart: ColorRGB = { r: 81 / 255, g: 39 / 255, b: 49 / 255 }
 const gradientEnd: ColorRGB = { r: 20 / 255, g: 20 / 255, b: 20 / 255 }
 let gradientProgress = 0
@@ -104,7 +117,6 @@ onMounted(() => {
 
   // Get WebGL context (WebGL1 or WebGL2)
   const { gl, ext } = getWebGLContext(canvas)
-  if (!gl || !ext) return
 
   // If no linear filtering, reduce resolution
   if (!ext.supportLinearFiltering) {
@@ -112,7 +124,10 @@ onMounted(() => {
     config.SHADING = false
   }
 
-  function getWebGLContext(canvas: HTMLCanvasElement) {
+  function getWebGLContext(canvas: HTMLCanvasElement): {
+    gl: WebGL2RenderingContext | WebGLRenderingContext
+    ext: WebGLContextExt
+  } {
     const params = {
       alpha: true,
       depth: false,
@@ -153,9 +168,9 @@ onMounted(() => {
       ? (gl as WebGL2RenderingContext).HALF_FLOAT
       : (halfFloat && halfFloat.HALF_FLOAT_OES) || 0
 
-    let formatRGBA: unknown
-    let formatRG: unknown
-    let formatR: unknown
+    let formatRGBA: TextureFormat | null = null
+    let formatRG: TextureFormat | null = null
+    let formatR: TextureFormat | null = null
 
     if (isWebGL2) {
       formatRGBA = getSupportedFormat(
@@ -182,6 +197,10 @@ onMounted(() => {
       formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType)
     }
 
+    if (!formatRGBA || !formatRG || !formatR) {
+      throw new Error('Unsupported framebuffer format.')
+    }
+
     return {
       gl,
       ext: {
@@ -199,7 +218,7 @@ onMounted(() => {
     internalFormat: number,
     format: number,
     type: number
-  ): { internalFormat: number; format: number } | null {
+  ): TextureFormat | null {
     if (!supportRenderTextureFormat(gl, internalFormat, format, type)) {
       // For WebGL2 fallback:
       if ('drawBuffers' in gl) {
@@ -1241,7 +1260,7 @@ onMounted(() => {
 
   // -------------------- Event Listeners --------------------
   window.addEventListener('mousedown', e => {
-    const pointer = pointers[0]
+    const pointer = pointers[0]!
     const posX = scaleByPixelRatio(e.clientX)
     const posY = scaleByPixelRatio(e.clientY)
     updatePointerDownData(pointer, -1, posX, posY)
@@ -1250,7 +1269,7 @@ onMounted(() => {
 
   // Start rendering on first mouse move
   function handleFirstMouseMove(e: MouseEvent) {
-    const pointer = pointers[0]
+    const pointer = pointers[0]!
     const posX = scaleByPixelRatio(e.clientX)
     const posY = scaleByPixelRatio(e.clientY)
     const color = generateColor()
@@ -1261,7 +1280,7 @@ onMounted(() => {
   document.body.addEventListener('mousemove', handleFirstMouseMove)
 
   window.addEventListener('mousemove', e => {
-    const pointer = pointers[0]
+    const pointer = pointers[0]!
     const posX = scaleByPixelRatio(e.clientX)
     const posY = scaleByPixelRatio(e.clientY)
     const color = pointer.color
@@ -1271,12 +1290,14 @@ onMounted(() => {
   // Start rendering on first touch
   function handleFirstTouchStart(e: TouchEvent) {
     const touches = e.targetTouches
-    const pointer = pointers[0]
+    const pointer = pointers[0]!
     for (let i = 0; i < touches.length; i++) {
-      const posX = scaleByPixelRatio(touches[i].clientX)
-      const posY = scaleByPixelRatio(touches[i].clientY)
+      const touch = touches[i]
+      if (!touch) continue
+      const posX = scaleByPixelRatio(touch.clientX)
+      const posY = scaleByPixelRatio(touch.clientY)
       updateFrame()
-      updatePointerDownData(pointer, touches[i].identifier, posX, posY)
+      updatePointerDownData(pointer, touch.identifier, posX, posY)
     }
     document.body.removeEventListener('touchstart', handleFirstTouchStart)
   }
@@ -1286,11 +1307,13 @@ onMounted(() => {
     'touchstart',
     e => {
       const touches = e.targetTouches
-      const pointer = pointers[0]
+      const pointer = pointers[0]!
       for (let i = 0; i < touches.length; i++) {
-        const posX = scaleByPixelRatio(touches[i].clientX)
-        const posY = scaleByPixelRatio(touches[i].clientY)
-        updatePointerDownData(pointer, touches[i].identifier, posX, posY)
+        const touch = touches[i]
+        if (!touch) continue
+        const posX = scaleByPixelRatio(touch.clientX)
+        const posY = scaleByPixelRatio(touch.clientY)
+        updatePointerDownData(pointer, touch.identifier, posX, posY)
       }
     },
     false
@@ -1300,10 +1323,12 @@ onMounted(() => {
     'touchmove',
     e => {
       const touches = e.targetTouches
-      const pointer = pointers[0]
+      const pointer = pointers[0]!
       for (let i = 0; i < touches.length; i++) {
-        const posX = scaleByPixelRatio(touches[i].clientX)
-        const posY = scaleByPixelRatio(touches[i].clientY)
+        const touch = touches[i]
+        if (!touch) continue
+        const posX = scaleByPixelRatio(touch.clientX)
+        const posY = scaleByPixelRatio(touch.clientY)
         updatePointerMoveData(pointer, posX, posY, pointer.color)
       }
     },
@@ -1312,7 +1337,7 @@ onMounted(() => {
 
   window.addEventListener('touchend', e => {
     const touches = e.changedTouches
-    const pointer = pointers[0]
+    const pointer = pointers[0]!
     for (let i = 0; i < touches.length; i++) {
       updatePointerUpData(pointer)
     }

@@ -26,11 +26,11 @@ const weddingDateDisplay = computed(() => {
 })
 
 import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
+// import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/ui/select'
-import WavyBackground from '@/components/WavyBackground.vue'
+// import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/ui/select'
+// import WavyBackground from '@/components/WavyBackground.vue'
 import FluidCursor from '@/components/FluidCursor.vue'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
