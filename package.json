@@ -16,7 +16,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.562.0",
-    "motion-v": "^1.7.4",
+    "motion-v": "^1.7.5",
     "ogl": "^1.0.11",
     "reka-ui": "^2.7.0",
     "simplex-noise": "^4.0.3",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@types/node": "^25.0.3",
-    "@typescript-eslint/eslint-plugin": "^8.50.1",
-    "@typescript-eslint/parser": "^8.50.1",
+    "@typescript-eslint/eslint-plugin": "^8.52.0",
+    "@typescript-eslint/parser": "^8.52.0",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
@@ -39,7 +39,7 @@
     "typescript": "~5.9.3",
     "vite": "^7.3.0",
     "vue-eslint-parser": "^10.2.0",
-    "vue-tsc": "^3.2.1"
+    "vue-tsc": "^3.2.2"
   },
-  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
+  "packageManager": "pnpm@10.27.0"
 }
