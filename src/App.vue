@@ -184,12 +184,12 @@ async function submitRSVP() {
     return
   }
   try {
-    const res = await fetch('https://script.google.com/macros/s/AKfycbzsG9jxlV84Ki2OMxq_YPk1EEqXJ0AZwzNtdj63NCJCz2uEsRK2juP23mOhOVhg9DA/exec', {
+    
+    const res = await fetch('https://script.google.com/macros/s/AKfycbyCLvJ29tnsJdK53u3Jt7pR9EhAXpsZFx2jtMA7UcblJbAhuQRjI_jcRnPRUVCx8Bd5/exec', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        ...form.value,
-        name: `${form.value.firstName} ${form.value.lastName}`.trim()
+        ...form.value
       })
     })
     if (res.ok) {
@@ -357,7 +357,7 @@ async function submitRSVP() {
 
               </RadioGroup>
             <!-- </Select> -->
-            {{ form.attending }}
+            
           </div>
           <Textarea class="border-[#512731]" v-model="form.notes" :placeholder="conf.rsvp && conf.rsvp.notesPlaceholder ? conf.rsvp.notesPlaceholder : 'Notes'
             " />
@@ -560,5 +560,4 @@ async function submitRSVP() {
     <span class="text-2xl leading-none">↓</span>
   </button>
 </template>
-
 
