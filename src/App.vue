@@ -184,36 +184,52 @@ function openLightbox(src) {
 }
 
 async function submitRSVP() {
+  // Basic validation
   if (!form.value.firstName || !form.value.lastName || !form.value.attending) {
-    responseMessage.value = 'Please fill in all required fields.'
-    return
+    responseMessage.value = 'Please fill in all required fields.';
+    return;
   }
-  try {
 
-    const origin = window.location.origin
+  try {
+    const origin = window.location.origin;
+
     const res = await fetch(
-      `https://script.google.com/macros/s/AKfycbyiD1lnAV5qIRiDrxAtlrHFHotl1vtH64MBrGKB26e5sB7gABK3UyXVTARPF5qhxruG/exec?origin=${encodeURIComponent(origin)}`,
+      `https://script.google.com/macros/s/AKfycbz258_BHDDTkLwk0KSQRJ6Fxi-EMYGkXRx1BbPU29SorMsInoN_TRZGXHTxu1khyYys/exec?origin=${encodeURIComponent(origin)}`,
       {
         method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ ...form.value })
+        headers: {
+          'Content-Type': 'application/json'   // ✅ use JSON, not text/plain
+        },
+        body: JSON.stringify({
+          firstName: form.value.firstName,
+          lastName: form.value.lastName,
+          attending: form.value.attending,
+          notes: form.value.notes,
+          contact_no: form.value.contact_no
+        })
       }
-    )
+    );
 
     if (res.ok) {
-      responseMessage.value = 'Thank you! Your RSVP has been recorded.'
-      form.value = {
-        firstName: '',
-        lastName: '',
-        attending: '',
-        notes: '',
-        contact_no: ''
+      const data = await res.json();
+      if (data.ok) {
+        responseMessage.value = 'Thank you! Your RSVP has been recorded.';
+        form.value = {
+          firstName: '',
+          lastName: '',
+          attending: '',
+          notes: '',
+          contact_no: ''
+        };
+      } else {
+        throw new Error(data.error || 'Submission failed');
       }
     } else {
-      throw new Error('Submission failed')
+      throw new Error('Network response was not ok');
     }
-  } catch {
-    responseMessage.value = 'Oops! Something went wrong. Please try again.'
+  } catch (err) {
+    console.error(err);
+    responseMessage.value = 'Oops! Something went wrong. Please try again.';
   }
 }
 </script>
