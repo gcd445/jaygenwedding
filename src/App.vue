@@ -1,6 +1,6 @@
 ﻿<script setup>
 import conf from '@/config/config.json'
-import { ref, onMounted, computed, onUnmounted } from 'vue'
+import { ref, reactive, onMounted, computed, onUnmounted } from 'vue'
 const coupleNames = conf.coupleNames
 const schedule = conf.schedule
 const weddingDateRaw = conf.weddingDate
