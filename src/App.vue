@@ -89,6 +89,7 @@ const form = reactive({
 
 // Reactive message state
 const responseMessage = ref('')
+const responseStatus = ref('')
 
 
 // Smooth scroll to section by id
@@ -189,6 +190,7 @@ function openLightbox(src) {
 async function submitRSVP() {
   if (!form.firstName || !form.lastName || !form.attending) {
     responseMessage.value = 'Please fill in all required fields.'
+    responseStatus.value = 'error'
     return
   }
 
@@ -212,6 +214,7 @@ async function submitRSVP() {
       const data = await res.json()
       if (data.ok) {
         responseMessage.value = 'Thank you! Your RSVP has been recorded.'
+        responseStatus.value = 'success'
         // Reset form
         form.firstName = ''
         form.lastName = ''
@@ -227,6 +230,7 @@ async function submitRSVP() {
   } catch (err) {
     console.error(err)
     responseMessage.value = 'Oops! Something went wrong. Please try again.'
+    responseStatus.value = 'error'
   }
 }
 
@@ -273,20 +277,34 @@ async function submitRSVP() {
 
       <!-- Main Text -->
       <div data-reveal class="flex flex-col items-center justify-center space-y-2"><br>
-        <p class="text-[80px] md:text-[120px] m-0 leading-[0.8]" style="font-family: 'HeaderFont';">
+        <p class="hero-name text-[80px] md:text-[120px] m-0 leading-[0.8]" style="font-family: 'HeaderFont';">
           JAY
         </p>
-        <p class="text-[30px] md:text-[80px] m-0 leading-[0.8]" style="font-family: 'Arsenica Trial';">
+        <p class="hero-amp text-[30px] md:text-[80px] m-0 leading-[0.8]" style="font-family: 'Arsenica Trial';">
           &
         </p>
-        <p class="text-[80px] md:text-[120px] m-0 leading-[1.15]" style="font-family: 'HeaderFont';">
+        <p class="hero-name text-[80px] md:text-[120px] m-0 leading-[1.15]" style="font-family: 'HeaderFont';">
           GEN
         </p>
       </div>
       <div style="font-family: 'Aviano Sans'; font-weight: 600;">
         <br></br>
         <p class="text-base mt-2">AT SILANG, CAVITE</p>
-        <p class="text-base mt-2">TUESDAY • APRIL 28, 2026 • 1:00 PM</p>
+       
+        
+        <Button
+          as="a"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jay%20%26%20Gen%20Wedding&dates=20260428T050000Z/20260428T070000Z&details=We%27re%20getting%20married!%20Please%20join%20us%20for%20the%20celebration.&location=Silang%2C%20Cavite"
+          target="_blank"
+          rel="noreferrer"
+          class="mt-1 inline-flex items-center border border-[#5f3841] bg-[#512731] gap-2 cursor-pointer rounded-full  text-white text-sm md:text-base px-4 py-2 hover:bg-[#5f3841]/25"
+          style="font-family: 'Aviano Sans'"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
+            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 8H5v10h14V10Z" />
+          </svg>
+          <span>TUESDAY • APRIL 28, 2026 • 1:00 PM</span>
+        </Button>
       </div>
     </div>
   </section>
@@ -318,7 +336,7 @@ async function submitRSVP() {
 
     <!-- Message -->
     <div class="space-y-10 flex flex-col text-center items-center">
-      <div class="max-w-sm md:max-w-4xl text-sm md:text-lg" style="font-family: 'Aviano Sans'; line-height: 1.75;">
+      <div class="max-w-xs md:max-w-4xl text-xs md:text-lg" style="font-family: 'Aviano Sans'; line-height: 1.75;">
         <p>We're counting down to our wedding day and couldn't be more excited to celebrate with you.</p>
         <p>We've created this website to share all the details as we get closer to "I do."</p>
         <p>Thank you for being part of our lives and celebrating this next chapter with us.</p>
@@ -338,20 +356,22 @@ async function submitRSVP() {
   <section
     class="relative bg-[#fffaf6] min-h-screen flex flex-col items-center justify-center px-6 md:px-12 py-12 text-center space-y-8 text-[#4b2e2e]">
     <!-- Top Right Floral -->
-    <img src="/img/roses2.png" alt="Top left floral" class="absolute top-5 left-0 w-30 md:w-80" />
+    <img src="/img/roses2.png" alt="Top left floral"
+      class="absolute top-0 left-0 w-30 lg:w-80 pointer-events-none opacity-40 z-0" />
 
     <!-- Bottom Left Floral (rotated for balance) -->
-    <img src="/img/roses2.png" alt="Bottom right floral" class="absolute bottom-0 right-0 w-30 md:w-80"
+    <img src="/img/roses2.png" alt="Bottom right floral"
+      class="absolute bottom-0 right-0 w-30 lg:w-80 pointer-events-none opacity-40 z-0"
       style="transform: rotate(180deg)" />
 
     <!-- RSVP Content -->
-    <div class="max-w-xl space-y-6">
-      <h2 data-reveal class="text-5xl md:text-6xl font-bold tracking-wide"
+    <div class="relative z-10 max-w-xl space-y-6">
+      <h2 data-reveal class="rsvp-title text-5xl md:text-6xl font-bold tracking-wide"
         style="font-family: 'Cormorant Garamond Italic'">
         RSVP
       </h2>
       <div style="font-family: 'Aviano Sans'" class="space-y-4">
-        <p class="text-sm md:text-lg">
+        <p class="text-sm md:text-lg rsvp-pulse">
           Please respond by <strong>March 8</strong>
         </p>
 
@@ -362,14 +382,14 @@ async function submitRSVP() {
           </div>
 
           <div class="flex items-center gap-5">
-            <p class="border-[#512731]">Will you attend?</p>
+            <p class="border-[#512731]">Will you attend?*</p>
             <RadioGroup class="flex cursor-pointer gap-8" v-model="form.attending">
               <div class="flex items-center space-x-2">
-                <RadioGroupItem class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
+                <RadioGroupItem required class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
                 <Label class="cursor-pointer" for="Yes">Yes</Label>
               </div>
               <div class="flex items-center space-x-2">
-                <RadioGroupItem class="border-[#512731] cursor-pointer" id="No" value="No" />
+                <RadioGroupItem required class="border-[#512731] cursor-pointer" id="No" value="No" />
                 <Label class="cursor-pointer" for="No">No</Label>
               </div>
             </RadioGroup>
@@ -385,7 +405,12 @@ async function submitRSVP() {
             Submit RSVP
           </Button>
 
-          <div style="margin-top: 10px; color: #512731; font-family: 'Aviano Sans'">
+          <div
+            v-if="responseMessage"
+            class="rsvp-response"
+            :class="responseStatus === 'success' ? 'rsvp-success' : 'rsvp-alert'"
+            style="margin-top: 10px; font-family: 'Aviano Sans'"
+          >
             {{ responseMessage }}
           </div>
         </form>
@@ -586,3 +611,109 @@ async function submitRSVP() {
     <span class="text-2xl leading-none">↓</span>
   </button>
 </template>
+
+<style scoped>
+.rsvp-pulse {
+  display: inline-block;
+  animation: rsvp-pulse 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.rsvp-response {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #512731;
+  background: rgba(81, 39, 49, 0.08);
+  color: #512731;
+  font-weight: 600;
+}
+
+.rsvp-alert {
+  border-color: #b42318;
+  background: rgba(180, 35, 24, 0.12);
+  color: #b42318;
+  animation: rsvp-alert-pulse 2s ease-in-out infinite, rsvp-alert-blink 1.2s step-end infinite;
+}
+
+.rsvp-success {
+  border-color: #067647;
+  background: rgba(6, 118, 71, 0.12);
+  color: #067647;
+}
+
+.calendar-link {
+  display: inline-block;
+  color: #512731;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+
+.calendar-link:hover {
+  color: #3f1d24;
+}
+
+@keyframes rsvp-pulse {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  35% {
+    transform: scale(1.06) translateY(-2px);
+  }
+  55% {
+    transform: scale(0.98) translateY(0);
+  }
+  75% {
+    transform: scale(1.02) translateY(-1px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes rsvp-alert-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes rsvp-alert-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rsvp-pulse {
+    animation: none;
+  }
+
+  .rsvp-alert {
+    animation: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-name {
+    font-size: 64px;
+    line-height: 0.9;
+  }
+
+  .hero-amp {
+    font-size: 24px;
+  }
+
+  .rsvp-title {
+    font-size: 2.5rem;
+  }
+}
+</style>
