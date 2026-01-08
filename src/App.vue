@@ -78,15 +78,18 @@ const countdownSeconds = ref('00')
 const lightboxOpen = ref(false)
 const lightboxImg = ref('')
 
-const form = ref({
+// Reactive form state
+const form = reactive({
   firstName: '',
   lastName: '',
-  // guests: '',
   attending: '',
-  contact_no: '',
-  notes: ''
+  notes: '',
+  contact_no: ''
 })
+
+// Reactive message state
 const responseMessage = ref('')
+
 
 // Smooth scroll to section by id
 function scrollToSection(id) {
@@ -184,54 +187,44 @@ function openLightbox(src) {
 }
 
 async function submitRSVP() {
-  // Basic validation
-  if (!form.value.firstName || !form.value.lastName || !form.value.attending) {
-    responseMessage.value = 'Please fill in all required fields.';
-    return;
+  if (!form.firstName || !form.lastName || !form.attending) {
+    responseMessage.value = 'Please fill in all required fields.'
+    return
   }
 
   try {
-    const origin = window.location.origin;
-
+    const origin = window.location.origin
     const res = await fetch(
-      `https://script.google.com/macros/s/AKfycbz258_BHDDTkLwk0KSQRJ6Fxi-EMYGkXRx1BbPU29SorMsInoN_TRZGXHTxu1khyYys/exec?origin=${encodeURIComponent(origin)}`,
+      `https://script.google.com/macros/s/AKfycbyiD1lnAV5qIRiDrxAtlrHFHotl1vtH64MBrGKB26e5sB7gABK3UyXVTARPF5qhxruG/exec?origin=${encodeURIComponent(origin)}`,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'   // ✅ use JSON, not text/plain
-        },
-        body: JSON.stringify({
-          firstName: form.value.firstName,
-          lastName: form.value.lastName,
-          attending: form.value.attending,
-          notes: form.value.notes,
-          contact_no: form.value.contact_no
-        })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form })
       }
-    );
+    )
 
     if (res.ok) {
-      const data = await res.json();
+      const data = await res.json()
       if (data.ok) {
-        responseMessage.value = 'Thank you! Your RSVP has been recorded.';
-        form.value = {
-          firstName: '',
-          lastName: '',
-          attending: '',
-          notes: '',
-          contact_no: ''
-        };
+        responseMessage.value = 'Thank you! Your RSVP has been recorded.'
+        // Reset form
+        form.firstName = ''
+        form.lastName = ''
+        form.attending = ''
+        form.notes = ''
+        form.contact_no = ''
       } else {
-        throw new Error(data.error || 'Submission failed');
+        throw new Error(data.error || 'Submission failed')
       }
     } else {
-      throw new Error('Network response was not ok');
+      throw new Error('Network response was not ok')
     }
   } catch (err) {
-    console.error(err);
-    responseMessage.value = 'Oops! Something went wrong. Please try again.';
+    console.error(err)
+    responseMessage.value = 'Oops! Something went wrong. Please try again.'
   }
 }
+
 </script>
 
 <template>
@@ -362,11 +355,10 @@ async function submitRSVP() {
             <Input class="border-[#512731] flex-1" v-model="form.firstName" placeholder="First Name" required />
             <Input class="border-[#512731] flex-1" v-model="form.lastName" placeholder="Last Name" required />
           </div>
-          <!-- <Input v-model="form.guests" type="number" placeholder="Number of Guests" /> -->
+
           <div class="flex items-center gap-5">
-            <!-- <Select class="border-[#512731]" v-model="form.attending" required> -->
             <p class="border-[#512731]">Will you attend?</p>
-            <RadioGroup class="flex cursor-pointer gap-8" v-model="form.attending" default-value="">
+            <RadioGroup class="flex cursor-pointer gap-8" v-model="form.attending">
               <div class="flex items-center space-x-2">
                 <RadioGroupItem class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
                 <Label class="cursor-pointer" for="Yes">Yes</Label>
@@ -375,18 +367,24 @@ async function submitRSVP() {
                 <RadioGroupItem class="border-[#512731] cursor-pointer" id="No" value="No" />
                 <Label class="cursor-pointer" for="No">No</Label>
               </div>
-
             </RadioGroup>
-            <!-- </Select> -->
-
           </div>
-          <Textarea class="border-[#512731]" v-model="form.notes" :placeholder="conf.rsvp && conf.rsvp.notesPlaceholder ? conf.rsvp.notesPlaceholder : 'Notes'
-            " />
+
+          <Textarea class="border-[#512731]" v-model="form.notes" placeholder="Notes" />
+
           <Input class="border-[#512731]" v-model="form.contact_no" placeholder="Contact Number (optional)" />
+
           <Button type="submit"
             class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xl rounded-full"
-            style="font-family: 'Aviano Sans'">Submit RSVP</Button>
+            style="font-family: 'Aviano Sans'">
+            Submit RSVP
+          </Button>
+
+          <div style="margin-top: 10px; color: #512731; font-family: 'Aviano Sans'">
+            {{ responseMessage }}
+          </div>
         </form>
+
 
         <div class="text-sm md:text-lg space-y-4">
           While we would love to celebrate with everyone, we are keeping our gathering small and intimate. We kindly ask
