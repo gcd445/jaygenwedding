@@ -1258,8 +1258,14 @@ onMounted(() => {
     return ((value - min) % range) + min
   }
 
+  function isPointerSuppressed(target: EventTarget | null) {
+    if (!(target instanceof Element)) return false
+    return !!target.closest('.cursor-pointer')
+  }
+
   // -------------------- Event Listeners --------------------
   window.addEventListener('mousedown', e => {
+    if (isPointerSuppressed(e.target)) return
     const pointer = pointers[0]!
     const posX = scaleByPixelRatio(e.clientX)
     const posY = scaleByPixelRatio(e.clientY)
@@ -1269,6 +1275,7 @@ onMounted(() => {
 
   // Start rendering on first mouse move
   function handleFirstMouseMove(e: MouseEvent) {
+    if (isPointerSuppressed(e.target)) return
     const pointer = pointers[0]!
     const posX = scaleByPixelRatio(e.clientX)
     const posY = scaleByPixelRatio(e.clientY)
@@ -1280,6 +1287,7 @@ onMounted(() => {
   document.body.addEventListener('mousemove', handleFirstMouseMove)
 
   window.addEventListener('mousemove', e => {
+    if (isPointerSuppressed(e.target)) return
     const pointer = pointers[0]!
     const posX = scaleByPixelRatio(e.clientX)
     const posY = scaleByPixelRatio(e.clientY)

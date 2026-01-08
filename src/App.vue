@@ -184,14 +184,17 @@ async function submitRSVP() {
     return
   }
   try {
-    
-    const res = await fetch('https://script.google.com/macros/s/AKfycbyCLvJ29tnsJdK53u3Jt7pR9EhAXpsZFx2jtMA7UcblJbAhuQRjI_jcRnPRUVCx8Bd5/exec', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        ...form.value
-      })
-    })
+
+    const origin = window.location.origin
+    const res = await fetch(
+      `https://script.google.com/macros/s/AKfycbz258_BHDDTkLwk0KSQRJ6Fxi-EMYGkXRx1BbPU29SorMsInoN_TRZGXHTxu1khyYys/exec?origin=${encodeURIComponent(origin)}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form.value })
+      }
+    )
+
     if (res.ok) {
       responseMessage.value = 'Thank you! Your RSVP has been recorded.'
       form.value = {
@@ -241,12 +244,8 @@ async function submitRSVP() {
         <!-- Arc Path -->
         <path id="arcPath" d="M50,200 A200,200 0 0,1 450,200" fill="none" stroke="transparent" />
         <!-- Text on Path -->
-        <text
-          fill="white"
-          class="text-[30px] md:text-[45px]"
-          letter-spacing="5"
-          style="font-family: 'Aviano Sans', sans-serif"
-        >
+        <text fill="white" class="text-[30px] md:text-[45px]" letter-spacing="5"
+          style="font-family: 'Aviano Sans', sans-serif">
           <textPath xlink:href="#arcPath" startOffset="50%" text-anchor="middle">
             THE WEDDING OF
           </textPath>
@@ -328,7 +327,8 @@ async function submitRSVP() {
 
     <!-- RSVP Content -->
     <div class="max-w-xl space-y-6">
-      <h2 data-reveal class="text-5xl md:text-6xl font-bold tracking-wide" style="font-family: 'Cormorant Garamond Italic'">
+      <h2 data-reveal class="text-5xl md:text-6xl font-bold tracking-wide"
+        style="font-family: 'Cormorant Garamond Italic'">
         RSVP
       </h2>
       <div style="font-family: 'Aviano Sans'" class="space-y-4">
@@ -344,25 +344,25 @@ async function submitRSVP() {
           <!-- <Input v-model="form.guests" type="number" placeholder="Number of Guests" /> -->
           <div class="flex items-center gap-5">
             <!-- <Select class="border-[#512731]" v-model="form.attending" required> -->
-              <p class="border-[#512731]">Will you attend?</p>
-              <RadioGroup class="flex cursor-pointer" v-model="form.attending" default-value="">
-                <div class="flex items-center space-x-2">
-                  <RadioGroupItem class="border-[#512731]" id="Yes" value="Yes" />
-                  <Label class="cursor-pointer" for="Yes">Yes</Label>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <RadioGroupItem class="border-[#512731]" id="No" value="No" />
-                  <Label class="cursor-pointer" for="No">No</Label>
-                </div>
+            <p class="border-[#512731]">Will you attend?</p>
+            <RadioGroup class="flex cursor-pointer gap-8" v-model="form.attending" default-value="">
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
+                <Label class="cursor-pointer" for="Yes">Yes</Label>
+              </div>
+              <div class="flex items-center space-x-2">
+                <RadioGroupItem class="border-[#512731] cursor-pointer" id="No" value="No" />
+                <Label class="cursor-pointer" for="No">No</Label>
+              </div>
 
-              </RadioGroup>
+            </RadioGroup>
             <!-- </Select> -->
-            
+
           </div>
           <Textarea class="border-[#512731]" v-model="form.notes" :placeholder="conf.rsvp && conf.rsvp.notesPlaceholder ? conf.rsvp.notesPlaceholder : 'Notes'
             " />
           <Input class="border-[#512731]" v-model="form.contact_no" placeholder="Contact Number (optional)" />
-          <Button type="submit" class="cursor-pointer bg-[#512731] hover:bg-[#5f3841] text-white text-xl rounded-full"
+          <Button type="submit" class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xl rounded-full"
             style="font-family: 'Aviano Sans'">Submit RSVP</Button>
         </form>
 
@@ -381,8 +381,7 @@ async function submitRSVP() {
     </div> -->
 
     <div class="md:w-2/3 w-full space-y-6 max-w-3xl text-center ">
-      <h2 data-reveal
-        class="rounded-lg text-3xl font-bold tracking-wide p-10"
+      <h2 data-reveal class="rounded-lg text-3xl font-bold tracking-wide p-10"
         style="font-family: 'Cormorant Garamond Italic', serif">
         <div class="flex flex-col">
           <p class="text-3xl md:text-5xl" style="font-family: 'HeaderFont'">OUR</p>
@@ -402,7 +401,8 @@ async function submitRSVP() {
           the story.
         </p>
         <p class="text-sm md:text-xl mb-2">
-          What started as a slow dance soon turned into pick-up lines, digital Polaroids, friendly table tennis matches, and math
+          What started as a slow dance soon turned into pick-up lines, digital Polaroids, friendly table tennis matches,
+          and math
           tutoring sessions—all simple moments that made ordinary days unforgettable.
         </p>
         <p class="text-sm md:text-xl mb-2">
@@ -417,7 +417,8 @@ async function submitRSVP() {
           remained each other's home—a safe space, a steady comfort, and the constant they always come back to.
         </p>
         <p class="text-sm md:text-xl mb-2">
-          On an intimate anniversary weekend in Batangas, just before sunset, as they watched the gentle waves crash along the shore, Jay asked Gen to spend forever with him —and she said yes.
+          On an intimate anniversary weekend in Batangas, just before sunset, as they watched the gentle waves crash
+          along the shore, Jay asked Gen to spend forever with him —and she said yes.
         </p>
         <p class="text-sm md:text-xl leading-relaxed mb-2">
           By grace and through faith, they are now ready for the adventure of a lifetime, surrounded
@@ -445,20 +446,20 @@ async function submitRSVP() {
             Heights, South Boulevard, Silang, Cavite</p>
         </div>
         <a href="https://maps.app.goo.gl/6oRHBgGha6fQicPo8"
-          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-sm" target="_blank"
-          rel="noreferrer">Get Directions</a>
+          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-sm"
+          target="_blank" rel="noreferrer">Get Directions</a>
       </div>
       <div>
         <h3 class="text-sm md:text-xl">Reception will follow at</h3>
         <div class="flex flex-col">
           <p class="text-base md:text-2xl" style="font-family: 'Lora'"><strong>ALTA VERANDA DE TIBIG</strong></p>
           <p class="text-base md:text-xl" style="font-family: 'Cormorant Garamond Italic';">Alcalde St. Brgy. Tibig,
-           Silang, Cavite
+            Silang, Cavite
           </p>
         </div>
         <a href="https://maps.app.goo.gl/YAr1f6YgVdHib9RZA"
-          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-base" target="_blank"
-          rel="noreferrer">Get Directions</a>
+          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-base"
+          target="_blank" rel="noreferrer">Get Directions</a>
       </div>
     </div>
   </section>
@@ -478,60 +479,61 @@ async function submitRSVP() {
       <!-- Color Palette Circles -->
       <div class="flex justify-center space-x-4 my-6">
         <div class="flex justify-center space-x-2">
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#b4b29dff;"></div> <!-- Sage Green -->
+          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#b4b29dff;"></div>
+          <!-- Sage Green -->
           <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#a495a8ff;"></div> <!-- Lilac -->
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#c6a4a2ff;"></div> <!-- Blush Pink-->
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#e8b8acff;"></div> <!-- Soft Peach -->
+          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#c6a4a2ff;"></div>
+          <!-- Blush Pink-->
+          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#e8b8acff;"></div>
+          <!-- Soft Peach -->
           <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#f7e7cdff;"></div> <!-- Champagne-->
-          </div>
+        </div>
       </div>
 
-      <p>Celebrate our summer wedding with us in light, soft pastel colors. Any gentle, muted shade is perfect, and delicate florals are welcome.</p>
+      <p>Celebrate our summer wedding with us in light, soft pastel colors. Any gentle, muted shade is perfect, and
+        delicate florals are welcome.</p>
 
     </div>
 
 
 
     <a href="https://pin.it/6rZBNSOw1"
-      class="inline-block bg-[#512731] text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold hover:bg-[#5f3841] transition">View Attire Pegs Here</a>
+      class="inline-block bg-[#512731] text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold hover:bg-[#5f3841] transition">View
+      Attire Pegs Here</a>
   </section>
-  
-<!-- A NOTE ON Gifts -->
-<section class= "min-h-screen flex items-center justify-center px-6 py-12 text-center text-[#512731]"
-  style="background-image: linear-gradient(rgba(255,250,246,0.4), rgba(255,250,246,0.75)), url('/img/roses3.png'); background-size: cover; background-position: center;">
-  <div
-    class="mx-auto flex max-w-3xl flex-col items-center space-y-6 rounded-4xl border border-[#512731] bg-white/60 px-8 py-14 shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
-    style="backdrop-filter: blur(14px); font-family: 'Aviano Sans'">
-    
-    <!-- Heading -->
-    <div data-reveal class="flex flex-col items-center text-center">
-      <p class="text-4xl md:text-5xl" style="font-family: 'HeaderFont'">A NOTE ON</p>
-      <p class="text-6xl md:text-7xl -mt-5 bold" style='font-family: "Swear Display Light Cilati";'>Gifts</p>
+
+  <!-- A NOTE ON Gifts -->
+  <section class="min-h-screen flex items-center justify-center px-6 py-12 text-center text-[#512731]"
+    style="background-image: linear-gradient(rgba(255,250,246,0.4), rgba(255,250,246,0.75)), url('/img/roses3.png'); background-size: cover; background-position: center;">
+    <div
+      class="mx-auto flex max-w-3xl flex-col items-center space-y-6 rounded-4xl border border-[#512731] bg-white/60 px-8 py-14 shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
+      style="backdrop-filter: blur(14px); font-family: 'Aviano Sans'">
+
+      <!-- Heading -->
+      <div data-reveal class="flex flex-col items-center text-center">
+        <p class="text-4xl md:text-5xl" style="font-family: 'HeaderFont'">A NOTE ON</p>
+        <p class="text-6xl md:text-7xl -mt-5 bold" style='font-family: "Swear Display Light Cilati";'>Gifts</p>
+      </div>
+
+      <!-- Body -->
+      <p class="text-base md:text-lg max-w-xl">
+        Your presence at our wedding is the greatest gift of all. If you wish to contribute to our future together,
+        you can do so via the QR code linked to our UnionBank account.
+      </p>
+
+      <!-- Button -->
+      <Button as="a" href="https://drive.google.com/file/d/1TFCZm7wWcSzReCtw6GP6YAcckbTkRuRW/view?usp=sharing"
+        target="_blank" rel="noreferrer"
+        class="cursor-pointer rounded-full bg-[#512731] text-white px-6 py-3 font-semibold hover:bg-[#5f3841] transition">
+        Download QR Code Here
+      </Button>
+
+      <!-- Closing -->
+      <p class="text-base md:text-lg max-w-xl">
+        Your generosity will help us as we start this new chapter together, and we are deeply grateful.
+      </p>
     </div>
-
-    <!-- Body -->
-    <p class="text-base md:text-lg max-w-xl">
-      Your presence at our wedding is the greatest gift of all. If you wish to contribute to our future together,
-      you can do so via the QR code linked to our UnionBank account.
-    </p>
-
-    <!-- Button -->
-    <Button
-      as="a"
-      href="https://drive.google.com/file/d/1TFCZm7wWcSzReCtw6GP6YAcckbTkRuRW/view?usp=sharing"
-      target="_blank"
-      rel="noreferrer"
-      class="cursor-pointer rounded-full bg-[#512731] text-white px-6 py-3 font-semibold hover:bg-[#5f3841] transition"
-    >
-      Download QR Code Here
-    </Button>
-
-    <!-- Closing -->
-    <p class="text-base md:text-lg max-w-xl">
-      Your generosity will help us as we start this new chapter together, and we are deeply grateful.
-    </p>
-  </div>
-</section>
+  </section>
 
 
   <!-- Footer -->
@@ -550,14 +552,13 @@ async function submitRSVP() {
     <img :src="lightboxImg" class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg" />
   </div>
   <button type="button" @click="scrollToPreviousSection"
-    class="fixed border-[1px] left-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#512731] text-white shadow-2xl transition hover:-translate-y-2 hover:bg-[#3d1a29]"
+    class="cursor-pointer fixed border-[1px] left-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#512731] text-white shadow-2xl transition hover:-translate-y-2 hover:bg-[#512731]/25"
     aria-label="Scroll to previous section">
     <span class="text-2xl leading-none">↑</span>
   </button>
   <button type="button" @click="scrollToNextSection"
-    class="fixed border-[1px] right-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-white/85 text-[#512731] shadow-2xl transition hover:-translate-y-2 hover:bg-white"
+    class="cursor-pointer fixed border-[1px] right-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#512731]/25 text-[#512731] shadow-2xl transition hover:-translate-y-2 hover:bg-white"
     aria-label="Scroll to next section">
     <span class="text-2xl leading-none">↓</span>
   </button>
 </template>
-
