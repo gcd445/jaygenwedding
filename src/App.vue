@@ -370,7 +370,7 @@ async function submitRSVP() {
             </RadioGroup>
           </div>
 
-          <Textarea class="border-[#512731]" v-model="form.notes" placeholder="Notes" />
+          <Textarea class="border-[#512731]" v-model="form.notes" placeholder="Let us know any dietary notes or special requests" />
 
           <Input class="border-[#512731]" v-model="form.contact_no" placeholder="Contact Number (optional)" />
 
