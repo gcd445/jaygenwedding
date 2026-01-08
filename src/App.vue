@@ -192,7 +192,7 @@ async function submitRSVP() {
 
     const origin = window.location.origin
     const res = await fetch(
-      `https://script.google.com/macros/s/AKfycbz258_BHDDTkLwk0KSQRJ6Fxi-EMYGkXRx1BbPU29SorMsInoN_TRZGXHTxu1khyYys/exec?origin=${encodeURIComponent(origin)}`,
+      `https://script.google.com/macros/s/AKfycbyiD1lnAV5qIRiDrxAtlrHFHotl1vtH64MBrGKB26e5sB7gABK3UyXVTARPF5qhxruG/exec?origin=${encodeURIComponent(origin)}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
