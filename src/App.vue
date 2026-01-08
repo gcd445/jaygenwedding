@@ -199,7 +199,7 @@ async function submitRSVP() {
       attending: form.attending,
       notes: form.notes,
       contact_no: form.contact_no
-    }).toString()
+    })
     const res = await fetch(
       "https://script.google.com/macros/s/AKfycbyiD1lnAV5qIRiDrxAtlrHFHotl1vtH64MBrGKB26e5sB7gABK3UyXVTARPF5qhxruG/exec",
       {
