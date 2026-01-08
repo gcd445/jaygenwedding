@@ -9,6 +9,11 @@ const email = conf.email
 const phone = conf.phone
 const venue = conf.venue
 const registryLink = conf.registryLink
+const giftsBgStyle = {
+  backgroundImage: `linear-gradient(rgba(255,250,246,0.75), rgba(255,250,246,0.7)), url('${import.meta.env.BASE_URL}img/roses3.png')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center'
+}
 
 // Format wedding date for display
 const weddingDateObj = computed(() => new Date(weddingDateRaw))
@@ -190,7 +195,7 @@ async function submitRSVP() {
       `https://script.google.com/macros/s/AKfycbz258_BHDDTkLwk0KSQRJ6Fxi-EMYGkXRx1BbPU29SorMsInoN_TRZGXHTxu1khyYys/exec?origin=${encodeURIComponent(origin)}`,
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({ ...form.value })
       }
     )
@@ -362,7 +367,8 @@ async function submitRSVP() {
           <Textarea class="border-[#512731]" v-model="form.notes" :placeholder="conf.rsvp && conf.rsvp.notesPlaceholder ? conf.rsvp.notesPlaceholder : 'Notes'
             " />
           <Input class="border-[#512731]" v-model="form.contact_no" placeholder="Contact Number (optional)" />
-          <Button type="submit" class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xl rounded-full"
+          <Button type="submit"
+            class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xl rounded-full"
             style="font-family: 'Aviano Sans'">Submit RSVP</Button>
         </form>
 
@@ -503,11 +509,10 @@ async function submitRSVP() {
   </section>
 
   <!-- A NOTE ON Gifts -->
-  <section class="min-h-screen flex items-center justify-center px-6 py-12 text-center text-[#512731]"
-    style="background-image: linear-gradient(rgba(255,250,246,0.4), rgba(255,250,246,0.75)), url('/img/roses3.png'); background-size: cover; background-position: center;">
+  <section class="min-h-screen flex items-center justify-center px-6 py-12 text-center text-[#512731]">
     <div
       class="mx-auto flex max-w-3xl flex-col items-center space-y-6 rounded-4xl border border-[#512731] bg-white/60 px-8 py-14 shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
-      style="backdrop-filter: blur(14px); font-family: 'Aviano Sans'">
+      style="backdrop-filter: blur(14px); font-family: 'Aviano Sans'" :style="giftsBgStyle">
 
       <!-- Heading -->
       <div data-reveal class="flex flex-col items-center text-center">
