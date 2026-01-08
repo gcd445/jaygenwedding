@@ -195,13 +195,13 @@ async function submitRSVP() {
   try {
     const origin = window.location.origin
     const res = await fetch(
-      `https://script.google.com/macros/s/AKfycbyiD1lnAV5qIRiDrxAtlrHFHotl1vtH64MBrGKB26e5sB7gABK3UyXVTARPF5qhxruG/exec?origin=${encodeURIComponent(origin)}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form })
-      }
-    )
+    "https://script.google.com/macros/s/AKfycbyiD1lnAV5qIRiDrxAtlrHFHotl1vtH64MBrGKB26e5sB7gABK3UyXVTARPF5qhxruG/exec",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...form })
+    }
+  );
 
     if (res.ok) {
       const data = await res.json()
