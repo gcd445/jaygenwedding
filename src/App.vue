@@ -268,7 +268,7 @@ async function submitRSVP() {
         <path id="arcPath" d="M50,200 A200,200 0 0,1 450,200" fill="none" stroke="transparent" />
         <!-- Text on Path -->
         <text fill="white" class="text-[30px] md:text-[45px]" letter-spacing="5"
-          style="font-family: 'Aviano Sans', sans-serif">
+          style="font-family: 'Montserrat Medium', sans-serif">
           <textPath xlink:href="#arcPath" startOffset="50%" text-anchor="middle">
             THE WEDDING OF
           </textPath>
@@ -287,7 +287,7 @@ async function submitRSVP() {
           GEN
         </p>
       </div>
-      <div style="font-family: 'Aviano Sans'; font-weight: 600;">
+      <div style="font-family: 'Montserrat Medium'; font-weight: 600;">
         <br></br>
         <p class="text-base mt-2">AT SILANG, CAVITE</p>
        
@@ -298,7 +298,7 @@ async function submitRSVP() {
           target="_blank"
           rel="noreferrer"
           class="mt-1 inline-flex items-center border border-[#5f3841] bg-[#512731] gap-2 cursor-pointer rounded-full  text-white text-sm md:text-base px-4 py-2 hover:bg-[#5f3841]/25"
-          style="font-family: 'Aviano Sans'"
+          style="font-family: 'Montserrat Medium'"
         >
           <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
             <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 8H5v10h14V10Z" />
@@ -318,32 +318,32 @@ async function submitRSVP() {
     <div data-reveal class="flex justify-center space-x-5 md:space-x-10 text-center" aria-live="polite">
       <div>
         <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownDays }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Cormorant Garamond Italic';">Days</div>
+        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Days</div>
       </div>
       <div>
         <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownHours }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Cormorant Garamond Italic';">Hours</div>
+        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Hours</div>
       </div>
       <div>
         <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownMinutes }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Cormorant Garamond Italic';">Minutes</div>
+        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Minutes</div>
       </div>
       <div>
         <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownSeconds }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Cormorant Garamond Italic';">Seconds</div>
+        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Seconds</div>
       </div>
     </div>
 
     <!-- Message -->
     <div class="space-y-10 flex flex-col text-center items-center">
-      <div class="max-w-xs md:max-w-4xl text-xs md:text-lg" style="font-family: 'Aviano Sans'; line-height: 1.75;">
+      <div class="max-w-xs md:max-w-4xl text-xs md:text-lg" style="font-family: 'Montserrat Medium'; line-height: 1.75;">
         <p>We're counting down to our wedding day and couldn't be more excited to celebrate with you.</p>
         <p>We've created this website to share all the details as we get closer to "I do."</p>
         <p>Thank you for being part of our lives and celebrating this next chapter with us.</p>
 
       </div>
       <div class="flex flex-col items-center">
-        <p class="-mb-1" style="font-family: 'Aviano Sans'">With love,</p>
+        <p class="-mb-1 text-xs md:text-lg" style="font-family: 'Montserrat Medium'">With love,</p>
         <div data-reveal class="flex items-center">
           <p class="text-[40px]" style="font-family: 'HeaderFont'">JAY</p>
           <p class="text-[20px]" style="font-family: 'Arsenica Trial'">&</p>
@@ -357,33 +357,33 @@ async function submitRSVP() {
     class="relative bg-[#fffaf6] min-h-screen flex flex-col items-center justify-center px-6 md:px-12 py-12 text-center space-y-8 text-[#4b2e2e]">
     <!-- Top Right Floral -->
     <img src="/img/roses2.png" alt="Top left floral"
-      class="absolute top-0 left-0 w-30 lg:w-80 pointer-events-none opacity-40 z-0" />
+      class="absolute top-0 left-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0" />
 
     <!-- Bottom Left Floral (rotated for balance) -->
     <img src="/img/roses2.png" alt="Bottom right floral"
-      class="absolute bottom-0 right-0 w-30 lg:w-80 pointer-events-none opacity-40 z-0"
+      class="absolute bottom-0 right-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0"
       style="transform: rotate(180deg)" />
 
     <!-- RSVP Content -->
     <div class="relative z-10 max-w-xl space-y-6">
-      <h2 data-reveal class="rsvp-title text-5xl md:text-6xl font-bold tracking-wide"
-        style="font-family: 'Cormorant Garamond Italic'">
+      <h2 data-reveal class="rsvp-title text-2xl md:text-4xl font-bold tracking-wide"
+        style="font-family: 'Libre Baskerville Regular'">
         RSVP
       </h2>
-      <div style="font-family: 'Aviano Sans'" class="space-y-4">
-        <p class="text-sm md:text-lg rsvp-pulse">
+      <div style="font-family: 'Montserrat Medium'" class="space-y-4">
+        <p class="text-xs md:text-lg rsvp-pulse">
           Please respond by <strong>March 8</strong>
         </p>
 
         <form @submit.prevent="submitRSVP" class="flex flex-col gap-4">
           <div class="flex flex-col gap-4 md:flex-row">
-            <Input class="border-[#512731] flex-1" v-model="form.firstName" placeholder="First Name" required />
-            <Input class="border-[#512731] flex-1" v-model="form.lastName" placeholder="Last Name" required />
+            <Input class="border-[#512731] flex-1 text-xs md:text-lg" v-model="form.firstName" placeholder="First Name" required />
+            <Input class="border-[#512731] flex-1 text-xs md:text-lg" v-model="form.lastName" placeholder="Last Name" required />
           </div>
 
-          <div class="flex items-center gap-5">
-            <p class="border-[#512731]">Will you attend?*</p>
-            <RadioGroup class="flex cursor-pointer gap-8" v-model="form.attending">
+          <div class="flex items-center gap-5 flex-wrap">
+            <p class="border-[#512731] text-xs md:text-lg">Will you attend?*</p>
+            <RadioGroup class="flex cursor-pointer gap-4 sm:gap-8 flex-wrap" v-model="form.attending">
               <div class="flex items-center space-x-2">
                 <RadioGroupItem required class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
                 <Label class="cursor-pointer" for="Yes">Yes</Label>
@@ -395,28 +395,28 @@ async function submitRSVP() {
             </RadioGroup>
           </div>
 
-          <Textarea class="border-[#512731]" v-model="form.notes" placeholder="Let us know any dietary notes or special requests" />
+          <Textarea class="border-[#512731] text-xs md:text-lg" v-model="form.notes" placeholder="Let us know any dietary notes or special requests" />
 
-          <Input class="border-[#512731]" v-model="form.contact_no" placeholder="Contact Number (optional)" />
+          <Input class="border-[#512731] text-xs md:text-lg" v-model="form.contact_no" placeholder="Contact Number" />
 
           <Button type="submit"
-            class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xl rounded-full"
-            style="font-family: 'Aviano Sans'">
-            Submit RSVP
+            class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xs md:text-lg rounded-full"
+            style="font-family: 'Montserrat Medium'">
+            SUBMIT RSVP
           </Button>
 
           <div
             v-if="responseMessage"
             class="rsvp-response"
             :class="responseStatus === 'success' ? 'rsvp-success' : 'rsvp-alert'"
-            style="margin-top: 10px; font-family: 'Aviano Sans'"
+            style="margin-top: 10px; font-family: 'Montserrat Medium'"
           >
             {{ responseMessage }}
           </div>
         </form>
 
 
-        <div class="text-sm md:text-lg space-y-4">
+        <div class="text-xs md:text-lg space-y-4">
           While we would love to celebrate with everyone, we are keeping our gathering small and intimate. We kindly ask
           that only invited guests attend, and we really appreciate your understanding and warm wishes!
         </div>
@@ -432,7 +432,7 @@ async function submitRSVP() {
 
     <div class="md:w-2/3 w-full space-y-6 max-w-3xl text-center ">
       <h2 data-reveal class="rounded-lg text-3xl font-bold tracking-wide p-10"
-        style="font-family: 'Cormorant Garamond Italic', serif">
+        style="font-family: 'Libre Baskerville Regular', serif">
         <div class="flex flex-col">
           <p class="text-3xl md:text-5xl" style="font-family: 'HeaderFont'">OUR</p>
           <p class="text-5xl md:text-7xl -mt-5" style='font-family: "Swear Display Light Cilati";'>Love Story</p>
@@ -444,7 +444,7 @@ async function submitRSVP() {
         <p class="text-4xl md:text-5xl" style="font-family: 'Arsenica Trial'">&</p>
         <p class="text-4xl md:text-5xl" style="font-family: 'Agatho Light Caps'">G</p>
       </div> -->
-      <div style="font-family: 'Cormorant Garamond Italic'">
+      <div style="font-family: 'Libre Baskerville Regular'">
         <p class="text-sm md:text-xl mb-2">
           Jay & Gen first crossed paths in Grade 5, just familiar faces in the same halls.
           It wasn't until highschool, when their friend groups intertwined, that fate stepped in and began to rewrite
@@ -471,15 +471,14 @@ async function submitRSVP() {
           along the shore, Jay asked Gen to spend forever with him —and she said yes.
         </p>
         <p class="text-sm md:text-xl leading-relaxed mb-2">
-          By grace and through faith, they are now ready for the adventure of a lifetime, surrounded
-          by the people who have supported and celebrated alongside them throughout the years.
+          By grace and through faith, they are now ready for the adventure of a lifetime, surrounded by the people who have supported and celebrated alongside them throughout the years.
         </p>
       </div>
     </div>
   </section>
 
   <section
-    class="bg-[url('/img/backgrounds/church_bg.jpg')] bg-cover text-white min-h-screen flex flex-col items-center justify-center text-center"
+    class="bg-[url('/img/backgrounds/church_bg.jpg')] bg-cover bg-center text-white min-h-screen flex flex-col items-center justify-center text-center"
     style="background-position: center 40%;">
     <h2 data-reveal class="text-2xl md:text-4xl mb-20" style="font-family: 'Swear Display Light Cilati';">
       <div class="flex items-center justify-center gap-5">
@@ -487,29 +486,29 @@ async function submitRSVP() {
       </div>
       <p class="text-5xl md:text-7xl" style="font-family: 'HeaderFont'">VENUES</p>
     </h2>
-    <div class="flex flex-col md:flex-row md:space-x-50 gap-10" style="font-family: 'Aviano Sans'">
+    <div class="flex flex-col md:flex-row md:space-x-50 gap-10" style="font-family: 'Montserrat Medium'">
       <div>
-        <h3 class="text-sm md:text-xl">Ceremony at</h3>
+        <h3 class="text-sm md:text-xl">THE CEREMONY</h3>
         <div class="flex flex-col">
           <p class="text-base md:text-2xl" style="font-family: 'Lora'"><strong>ST. BENEDICT PARISH</strong></p>
-          <p class="text-base md:text-xl" style="font-family: 'Cormorant Garamond Italic';">Ayala Westgrove
+          <p class="text-base md:text-xl" style="font-family: 'Libre Baskerville Regular';">Ayala Westgrove
             Heights, South Boulevard, Silang, Cavite</p>
         </div>
         <a href="https://maps.app.goo.gl/6oRHBgGha6fQicPo8"
           class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-sm"
-          target="_blank" rel="noreferrer">Get Directions</a>
+          target="_blank" rel="noreferrer">GET DIRECTIONS</a>
       </div>
       <div>
-        <h3 class="text-sm md:text-xl">Reception will follow at</h3>
+        <h3 class="text-sm md:text-xl">THE RECEPTION</h3>
         <div class="flex flex-col">
           <p class="text-base md:text-2xl" style="font-family: 'Lora'"><strong>ALTA VERANDA DE TIBIG</strong></p>
-          <p class="text-base md:text-xl" style="font-family: 'Cormorant Garamond Italic';">Alcalde St. Brgy. Tibig,
+          <p class="text-base md:text-xl" style="font-family: 'Libre Baskerville Regular';">Alcalde St. Brgy. Tibig,
             Silang, Cavite
           </p>
         </div>
         <a href="https://maps.app.goo.gl/YAr1f6YgVdHib9RZA"
           class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-base"
-          target="_blank" rel="noreferrer">Get Directions</a>
+          target="_blank" rel="noreferrer">GET DIRECTIONS</a>
       </div>
     </div>
   </section>
@@ -517,7 +516,7 @@ async function submitRSVP() {
   <!-- Dress Code Section -->
   <section
     class="flex flex-col bg-white min-h-screen justify-center items-center text-center text-[#4b2e2e] space-y-20 px-6 md:px-16"
-    style="font-family: 'Aviano Sans'">
+    style="font-family: 'Montserrat Medium'">
     <div data-reveal class="flex flex-col">
       <p class="text-4xl md:text-5xl" style="font-family: 'HeaderFont'">THE</p>
       <p class="text-6xl md:text-7xl -mt-5" style='font-family: "Swear Display Light Cilati";'>Dress Code</p>
@@ -556,7 +555,7 @@ async function submitRSVP() {
   <section class="min-h-screen flex items-center justify-center px-6 py-12 text-center text-[#512731]">
     <div
       class="mx-auto flex max-w-3xl flex-col items-center space-y-6 rounded-4xl border border-[#512731] bg-white/60 px-8 py-14 shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
-      style="backdrop-filter: blur(14px); font-family: 'Aviano Sans'" :style="giftsBgStyle">
+      style="backdrop-filter: blur(14px); font-family: 'Montserrat Medium'" :style="giftsBgStyle">
 
       <!-- Heading -->
       <div data-reveal class="flex flex-col items-center text-center">
@@ -587,7 +586,7 @@ async function submitRSVP() {
 
   <!-- Footer -->
   <footer class="bg-[#512731] text-center text-white py-8 px-4 space-y-2">
-    <p class="font-script text-sm" style="font-family: 'Cormorant Garamond Italic'">
+    <p class="font-script text-sm" style="font-family: 'Libre Baskerville Regular'">
       <em>with love and gratitude,</em>
     </p>
     <p class="text-sm" style="font-family: 'Lora'">
