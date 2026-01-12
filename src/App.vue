@@ -260,101 +260,139 @@ async function submitRSVP() {
     </Button>
   </div> -->
 
-  <section class="min-h-screen flex flex-col items-center justify-center gap-y-10 bg-[#512731] text-white py-0 px-5">
-    <div class="text-center space-y-0">
-      <!-- Arc Text -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250" class="mx-auto -mb-35 w-75 h-62">
-        <!-- Arc Path -->
-        <path id="arcPath" d="M50,200 A200,200 0 0,1 450,200" fill="none" stroke="transparent" />
-        <!-- Text on Path -->
-        <text fill="white" class="text-[30px] md:text-[45px]" letter-spacing="5"
-          style="font-family: 'Montserrat Medium', sans-serif">
-          <textPath xlink:href="#arcPath" startOffset="50%" text-anchor="middle">
-            THE WEDDING OF
-          </textPath>
-        </text>
-      </svg>
+<section class="min-h-screen flex flex-col items-center justify-start gap-y-10 bg-[#512731] text-white pt-20 md:pt-24 pb-16 md:pb-32 px-8 md:px-16">
+  <div class="text-center space-y-6 md:space-y-12">
 
-      <!-- Main Text -->
-      <div data-reveal class="flex flex-col items-center justify-center space-y-2"><br>
-        <p class="hero-name text-[80px] md:text-[120px] m-0 leading-[0.8]" style="font-family: 'HeaderFont';">
-          JAY
-        </p>
-        <p class="hero-amp text-[30px] md:text-[80px] m-0 leading-[0.8]" style="font-family: 'Arsenica Trial';">
-          &
-        </p>
-        <p class="hero-name text-[80px] md:text-[120px] m-0 leading-[1.15]" style="font-family: 'HeaderFont';">
-          GEN
-        </p>
-      </div>
-      <div style="font-family: 'Montserrat Medium'; font-weight: 600;">
-        <br></br>
-        <p class="text-base mt-2">AT SILANG, CAVITE</p>
-       
-        
-        <Button
-          as="a"
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jay%20%26%20Gen%20Wedding&dates=20260428T050000Z/20260428T070000Z&details=We%27re%20getting%20married!%20Please%20join%20us%20for%20the%20celebration.&location=Silang%2C%20Cavite"
-          target="_blank"
-          rel="noreferrer"
-          class="mt-1 inline-flex items-center border border-[#5f3841] bg-[#512731] gap-2 cursor-pointer rounded-full  text-white text-sm md:text-base px-4 py-2 hover:bg-[#5f3841]/25"
-          style="font-family: 'Montserrat Medium'"
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 8H5v10h14V10Z" />
-          </svg>
-          <span>TUESDAY • APRIL 28, 2026 • 1:00 PM</span>
-        </Button>
+    <!-- Arc Text (subtle arc) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200"
+         class="mx-auto w-75 h-24 md:h-28" preserveAspectRatio="xMidYMin meet" style="overflow: visible;">
+
+      <!-- Mobile Arc Path (slight arc) -->
+      <path id="arcPathMobile" d="M50,120 A180,50 0 0,1 450,120" class="md:hidden" fill="none" stroke="transparent" />
+
+      <!-- Desktop Arc Path (slight arc) -->
+      <path id="arcPathDesktop" d="M40,130 A220,60 0 0,1 460,130" class="hidden md:block" fill="none" stroke="transparent" />
+
+      <text fill="white" style="font-family: 'Manrope Bold', sans-serif; letter-spacing:3px;">
+        <!-- Mobile Text -->
+        <textPath xlink:href="#arcPathMobile" startOffset="50%" text-anchor="middle" class="md:hidden" style="font-size:25px;">
+          THE WEDDING OF
+        </textPath>
+        <!-- Desktop Text -->
+        <textPath xlink:href="#arcPathDesktop" startOffset="50%" text-anchor="middle" class="hidden md:inline" style="font-size:32px;">
+          THE WEDDING OF
+        </textPath>
+      </text>
+    </svg>
+
+    <!-- Main Names -->
+    <div data-reveal class="flex flex-col items-center justify-center -mt-4 md:-mt-4" style="line-height:1.2;">
+      <div class="hero-name text-[90px] md:text-[120px] m-0" style="font-family: 'HeaderFont'; line-height:1.2;">
+        <span class="hero-line">JAY</span>
+        <span class="hero-amp" aria-hidden="true">&</span>
+        <span class="hero-line">GEN</span>
       </div>
     </div>
-  </section>
+
+    
+    <!-- Calendar Button -->
+<Button
+  as="a"
+  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jay+%26+Gen+Wedding&dates=20260428T050000Z/20260428T120000Z&location=St.+Benedict+Parish,+Silang,+Cavite&details=We%E2%80%99re+getting+married!%0AJoin+us+as+we+celebrate+our+love.%0AMore+details+at+jaygenwedding.com%0A%0A1:00+PM+%E2%80%A2+Wedding+Ceremony%0ASt.+Benedict+Parish,+Silang,+Cavite%0A%0A4:00+PM+%E2%80%A2+Reception%0AAlta+Veranda+de+Tibig,+Silang,+Cavite%0A%0AReminder:%0APlease+adjust+your+notification+settings+after+adding+this+event+to+your+calendar+(recommended:+1+day+before+%26+1+hour+before)."
+  target="_blank"
+  rel="noreferrer"
+  class="mt-2 md:mt-3 inline-flex items-center border border-[#5f3841] bg-[#512731] gap-2 cursor-pointer rounded-full text-white text-xs md:text-sm px-4 py-2 hover:bg-[#5f3841]/25 uppercase"
+  style="font-family: 'Manrope Bold'"
+>
+  <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
+    <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 8H5v10h14V10Z" />
+  </svg>
+  <span>TUESDAY • APRIL 28, 2026 • 1:00 PM</span>
+</Button>
+
+
+
+    <!-- Ceremony & Reception Info -->
+    <div class="max-w-xs md:max-w-4xl text-xs md:text-lg" style="font-family: 'Libre Baskerville', serif; line-height: 1.75;">
+      <span class="text-[0.8em] md:text-sm"><em>ceremony at</em></span><br>
+      <span class="text-base md:text-xl font-semibold">ST. BENEDICT PARISH</span><br>
+      <span class="text-[0.8em] md:text-sm"><em>reception will follow at</em></span><br>
+      <span class="text-base md:text-xl font-semibold">ALTA VERANDA DE TIBIG<br> - PLAZA GUEVARRA</span><br>
+      <span class="text-[0.9em] md:text-sm">SILANG, CAVITE</span>
+    </div>
+
+  </div>
+</section>
+
+
+<section
+  class="flex flex-col bg-[#EFE7E1] min-h-screen justify-center items-center text-center text-[#4b2e2e] space-y-12 md:space-y-16 px-8 md:px-16"
+  style="font-family: 'Manrope'">
+  
+  <!-- Floral Artwork with top margin on desktop -->
+  <img data-reveal src="/img/roses1.png" alt="Floral artwork"
+       class="block mx-auto w-80 md:w-100 mt-8 md:mt-16"/>
+
+  <!-- Countdown Timer with responsive sizing and spacing -->
+  <div data-reveal 
+       class="flex justify-center text-center w-full max-w-md md:max-w-none px-4 md:px-0 space-x-3 md:space-x-10" 
+       aria-live="polite">
+
+    <div>
+      <div class="text-3xl sm:text-4xl md:text-6xl" style="font-family: 'Libre Baskerville Regular';">
+        {{ countdownDays }}
+      </div>
+      <div class="uppercase text-xs sm:text-sm md:text-sm" style="font-family: 'Libre Baskerville Regular';">Days</div>
+    </div>
+
+    <div>
+      <div class="text-3xl sm:text-4xl md:text-6xl" style="font-family: 'Libre Baskerville Regular';">
+        {{ countdownHours }}
+      </div>
+      <div class="uppercase text-xs sm:text-sm md:text-sm" style="font-family: 'Libre Baskerville Regular';">Hours</div>
+    </div>
+
+    <div>
+      <div class="text-3xl sm:text-4xl md:text-6xl" style="font-family: 'Libre Baskerville Regular';">
+        {{ countdownMinutes }}
+      </div>
+      <div class="uppercase text-xs sm:text-sm md:text-sm" style="font-family: 'Libre Baskerville Regular';">Minutes</div>
+    </div>
+
+    <div>
+      <div class="text-3xl sm:text-4xl md:text-6xl" style="font-family: 'Libre Baskerville Regular';">
+        {{ countdownSeconds }}
+      </div>
+      <div class="uppercase text-xs sm:text-sm md:text-sm" style="font-family: 'Libre Baskerville Regular';">Seconds</div>
+    </div>
+
+  </div>
+
+  <!-- Message -->
+  <div class="space-y-6 flex flex-col text-center items-center">
+    <div class="max-w-xs md:max-w-4xl text-sm md:text-lg" style="font-family: 'Manrope';">
+    <p class="text-sm md:text-lg mb-2">To our family and friends—thank you for being part of our lives. You've raised us, grounded us, and supported us every step of the way, and we would not be who we are today without your love.</p>
+    <p class="text-sm md:text-lg mb-2">Now, we're counting down to our wedding day and we're excited to celebrate with you!</p>
+    <p class="text-sm md:text-lg mb-2">We've created this website to share all the details as we get closer to "I do." Thank you for joining us in this next chapter of our story.</p>
+      
+    </div>
+
+    <!-- Signature -->
+    <div class="flex flex-col items-center mb-12 md:mb-20">
+      <p class="font-script text-sm md:text-lg" style="font-family: 'Libre Baskerville Regular'; line-height: 1.5;">with love,</p>
+      <div data-reveal class="flex items-center space-x-2 md:space-x-4">
+        <p class="text-[40px] md:text-[50px]" style="font-family: 'HeaderFont'">JAY</p>
+        <p class="text-[20px] md:text-[30px]" style="font-family: 'Arsenica Trial'">&</p>
+        <p class="text-[40px] md:text-[50px]" style="font-family: 'HeaderFont'">GEN</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
 
   <section
-    class="flex flex-col bg-[#fffaf6]  min-h-screen justify-center items-center text-center text-[#4b2e2e] space-y-20 px-10">
-    <!-- Placeholder Image -->
-    <img data-reveal src="/img/roses1.png" alt="Floral artwork" class="mx-auto w-auto" />
-
-    <!-- Countdown Timer -->
-    <div data-reveal class="flex justify-center space-x-5 md:space-x-10 text-center" aria-live="polite">
-      <div>
-        <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownDays }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Days</div>
-      </div>
-      <div>
-        <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownHours }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Hours</div>
-      </div>
-      <div>
-        <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownMinutes }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Minutes</div>
-      </div>
-      <div>
-        <div class="text-4xl md:text-6xl" style="font-family: 'Lora';">{{ countdownSeconds }}</div>
-        <div class="uppercase text-sm" style="font-family: 'Libre Baskerville Regular';">Seconds</div>
-      </div>
-    </div>
-
-    <!-- Message -->
-    <div class="space-y-10 flex flex-col text-center items-center">
-      <div class="max-w-xs md:max-w-4xl text-xs md:text-lg" style="font-family: 'Montserrat Medium'; line-height: 1.75;">
-        <p>We're counting down to our wedding day and couldn't be more excited to celebrate with you.</p>
-        <p>We've created this website to share all the details as we get closer to "I do."</p>
-        <p>Thank you for being part of our lives and celebrating this next chapter with us.</p>
-
-      </div>
-      <div class="flex flex-col items-center">
-        <p class="-mb-1 text-xs md:text-lg" style="font-family: 'Montserrat Medium'">With love,</p>
-        <div data-reveal class="flex items-center">
-          <p class="text-[40px]" style="font-family: 'HeaderFont'">JAY</p>
-          <p class="text-[20px]" style="font-family: 'Arsenica Trial'">&</p>
-          <p class="text-[40px]" style="font-family: 'HeaderFont'">GEN</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section
-    class="relative bg-[#fffaf6] min-h-screen flex flex-col items-center justify-center px-6 md:px-12 py-12 text-center space-y-8 text-[#4b2e2e]">
+    class="relative bg-[#EFE7E1] min-h-screen flex flex-col items-center justify-center px-8 md:px-16 py-12 text-center space-y-8 text-[#4b2e2e]">
     <!-- Top Right Floral -->
     <img src="/img/roses2.png" alt="Top left floral"
       class="absolute top-0 left-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0" />
@@ -366,42 +404,66 @@ async function submitRSVP() {
 
     <!-- RSVP Content -->
     <div class="relative z-10 max-w-xl space-y-6">
-      <h2 data-reveal class="rsvp-title text-2xl md:text-4xl font-bold tracking-wide"
-        style="font-family: 'Libre Baskerville Regular'">
-        RSVP
-      </h2>
-      <div style="font-family: 'Montserrat Medium'" class="space-y-4">
-        <p class="text-xs md:text-lg rsvp-pulse">
+      <h2
+  data-reveal
+  class="rsvp-title text-2xl md:text-6xl font-bold tracking-wide"
+  style="font-family: 'Arsenica Trial', serif"
+>
+  <em>RSVP</em>
+</h2>
+      <div style="font-family: 'Manrope'" class="space-y-4">
+        <p class="text-sm md:text-lg rsvp-pulse">
           Please respond by <strong>March 8</strong>
         </p>
 
         <form @submit.prevent="submitRSVP" class="flex flex-col gap-4">
           <div class="flex flex-col gap-4 md:flex-row">
-            <Input class="border-[#512731] flex-1 text-xs md:text-lg" v-model="form.firstName" placeholder="First Name" required />
-            <Input class="border-[#512731] flex-1 text-xs md:text-lg" v-model="form.lastName" placeholder="Last Name" required />
+            <Input class="border-[#512731] flex-1 text-sm md:text-lg" v-model="form.firstName" placeholder="First Name" required />
+            <Input class="border-[#512731] flex-1 text-sm md:text-lg" v-model="form.lastName" placeholder="Last Name" required />
           </div>
 
-          <div class="flex items-center gap-5 flex-wrap">
-            <p class="border-[#512731] text-xs md:text-lg">Will you attend?*</p>
-            <RadioGroup class="flex cursor-pointer gap-4 sm:gap-8 flex-wrap" v-model="form.attending">
-              <div class="flex items-center space-x-2">
-                <RadioGroupItem required class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
-                <Label class="cursor-pointer" for="Yes">Yes</Label>
-              </div>
-              <div class="flex items-center space-x-2">
-                <RadioGroupItem required class="border-[#512731] cursor-pointer" id="No" value="No" />
-                <Label class="cursor-pointer" for="No">No</Label>
-              </div>
-            </RadioGroup>
-          </div>
+<div class="flex items-center gap-5 flex-wrap">
+  <p class="border-[#512731] text-sm md:text-base font-medium">
+    Will you attend?*
+  </p>
 
-          <Textarea class="border-[#512731] text-xs md:text-lg" v-model="form.notes" placeholder="Let us know any dietary notes or special requests" />
+  <RadioGroup
+    class="flex cursor-pointer gap-4 sm:gap-8 flex-wrap text-sm md:text-base"
+    v-model="form.attending"
+  >
+    <div class="flex items-center space-x-2">
+      <RadioGroupItem
+        required
+        class="border-[#512731] cursor-pointer"
+        id="Yes"
+        value="Yes"
+      />
+      <Label class="cursor-pointer text-sm md:text-base" for="Yes">
+        Yes
+      </Label>
+    </div>
 
-          <Input class="border-[#512731] text-xs md:text-lg" v-model="form.contact_no" placeholder="Contact Number" />
+    <div class="flex items-center space-x-2">
+      <RadioGroupItem
+        required
+        class="border-[#512731] cursor-pointer"
+        id="No"
+        value="No"
+      />
+      <Label class="cursor-pointer text-sm md:text-base" for="No">
+        No
+      </Label>
+    </div>
+  </RadioGroup>
+</div>
+
+          <Textarea class="border-[#512731] text-sm md:text-lg" v-model="form.notes" placeholder="Let us know any dietary notes or special requests" />
+
+          <Input class="border-[#512731] text-sm md:text-lg" v-model="form.contact_no" placeholder="Contact Number" />
 
           <Button type="submit"
-            class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xs md:text-lg rounded-full"
-            style="font-family: 'Montserrat Medium'">
+            class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xs md:text-sm rounded-full uppercase"
+            style="font-family: 'Manrope Bold'">
             SUBMIT RSVP
           </Button>
 
@@ -409,153 +471,161 @@ async function submitRSVP() {
             v-if="responseMessage"
             class="rsvp-response"
             :class="responseStatus === 'success' ? 'rsvp-success' : 'rsvp-alert'"
-            style="margin-top: 10px; font-family: 'Montserrat Medium'"
+            style="margin-top: 10px; font-family: 'Manrope'"
           >
             {{ responseMessage }}
           </div>
         </form>
-
-
-        <div class="text-xs md:text-lg space-y-4">
-          While we would love to celebrate with everyone, we are keeping our gathering small and intimate. We kindly ask
-          that only invited guests attend, and we really appreciate your understanding and warm wishes!
+        
+         <div class="px-4 md:px-8">
+          <p class="text-xs md:text-sm" style="font-family: 'Manrope'">
+            <strong>
+              While we would love to celebrate with everyone, we are keeping our gathering small and intimate. We kindly ask that only invited guests attend, and we appreciate your understanding and warm wishes!
+            </strong>
+          </p>
         </div>
+        
       </div>
     </div>
   </section>
 
-  <section
-    class="flex flex-col bg-[#fffaf6] min-h-screen justify-center items-center text-justify text-[#4b2e2e] space-y-0 p-10">
-    <!-- <div class="md:w-1/3 w-full flex justify-center">
-      <img src="/img/roses3.png" alt="Floral illustration" class="w-40 md:w-full object-contain" />
-    </div> -->
 
-    <div class="md:w-2/3 w-full space-y-6 max-w-3xl text-center ">
-      <h2 data-reveal class="rounded-lg text-3xl font-bold tracking-wide p-10"
+ <section
+    class="flex flex-col bg-[#EFE7E1] justify-center items-center text-justify text-[#4b2e2e] space-y-0 px-8 md:px-16 py-10">
+
+    <div class="md:w-2/3 w-full space-y-6 max-w-3xl text-left">
+      <h2 data-reveal class="rounded-lg text-3xl text-[#4b2e2e]
+       font-bold tracking-wide p-10"
         style="font-family: 'Libre Baskerville Regular', serif">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center text-center">
           <p class="text-3xl md:text-5xl" style="font-family: 'HeaderFont'">OUR</p>
           <p class="text-5xl md:text-7xl -mt-5" style='font-family: "Swear Display Light Cilati";'>Love Story</p>
         </div>
-
       </h2>
-      <!-- <div data-reveal class="flex items-center justify-center  ">
-        <p class="text-4xl md:text-5xl" style="font-family: 'Agatho Light Caps'">J</p>
-        <p class="text-4xl md:text-5xl" style="font-family: 'Arsenica Trial'">&</p>
-        <p class="text-4xl md:text-5xl" style="font-family: 'Agatho Light Caps'">G</p>
-      </div> -->
-      <div style="font-family: 'Libre Baskerville Regular'">
-        <p class="text-sm md:text-xl mb-2">
-          Jay & Gen first crossed paths in Grade 5, just familiar faces in the same halls.
-          It wasn't until highschool, when their friend groups intertwined, that fate stepped in and began to rewrite
-          the story.
+
+      <div style="font-family: 'Libre Baskerville', serif; text-align: justify;" class="space-y-4 text-sm md:text-lg text-justify">
+      
+        <p class="text-sm md:text-lg mb-6 leading-relaxed">
+          <strong>WHERE IT ALL BEGAN</strong><br>
+         Jay & Gen first crossed paths in Grade 5, nothing more than familiar faces sharing the same school halls. Years later, in highschool, their worlds truly collided when their <em>barkadas</em> connected. What once felt ordinary slowly became the beginning of a story neither of them yet knew was unfolding.
         </p>
-        <p class="text-sm md:text-xl mb-2">
-          What started as a slow dance soon turned into pick-up lines, digital Polaroids, friendly table tennis matches,
-          and math
-          tutoring sessions—all simple moments that made ordinary days unforgettable.
+        <p class="text-sm md:text-lg mb-6 leading-relaxed">
+          <strong>FALLING IN LOVE</strong><br>
+         After highschool dance, Jay casually changed his Facebook profile picture to a photo with Gen—just a simple snapshot, no feelings attached… at least at first—yet it caught Gen's attention in a way neither expected. From that small spark grew playful pick-up lines, digital Polaroids, table tennis matches, and math tutoring sessions. Those little things became memories they would never forget.
         </p>
-        <p class="text-sm md:text-xl mb-2">
-          In 2011, Jay knew his heart had made its choice. He courted Gen with patience and charm, and six months later,
-          on a rainy August evening with Aerosmith's "I Don't Want to Miss a Thing" playing softly in the background,
-          Gen finally said yes. That was the moment their story as highschool sweethearts truly began.
+        <p class="text-sm md:text-lg mb-6 leading-relaxed">
+          <strong>CHOOSING EACH OTHER</strong><br>
+          In 2011, Jay realized his heart had chosen Gen. With patience and sincerity, he courted her, and six months later—on a rainy August evening with Aerosmith’s <em>“I Don’t Want to Miss a Thing”</em> softly playing—Gen said yes. Their journey as highschool sweethearts officially began, marking the start of a love that would grow stronger with time.
         </p>
-        <p class="text-sm md:text-xl mb-2">
-          Over more than a decade, celebrating milestones, figuring out adulting, binge-watching superhero and anime
-          series, movie date nights, weekend getaways, and exploring new foods and places across cities and countries,
-          every experience together has felt like its own little adventure. Yet through life's ups and downs, they've
-          remained each other's home—a safe space, a steady comfort, and the constant they always come back to.
+        <p class="text-sm md:text-lg mb-6 leading-relaxed">
+          <strong>THE FOREVER ADVENTURE</strong><br>
+         For more than a decade, Jay & Gen have grown together through milestones, movie nights, binge-watching favorite series, and discovering new food and places across cities and countries. During an intimate anniversary weekend in Batangas, with the sun setting and waves gently crashing on the shore, Jay asked Gen to spend forever with him—and once again, she said yes. By grace and through faith, they are now ready for the adventure of a lifetime—together.
         </p>
-        <p class="text-sm md:text-xl mb-2">
-          On an intimate anniversary weekend in Batangas, just before sunset, as they watched the gentle waves crash
-          along the shore, Jay asked Gen to spend forever with him —and she said yes.
-        </p>
-        <p class="text-sm md:text-xl leading-relaxed mb-2">
-          By grace and through faith, they are now ready for the adventure of a lifetime, surrounded by the people who have supported and celebrated alongside them throughout the years.
-        </p>
-      </div>
+        
+
+       </div>
     </div>
   </section>
 
-  <section
-    class="bg-[url('/img/backgrounds/church_bg.jpg')] bg-cover bg-center text-white min-h-screen flex flex-col items-center justify-center text-center"
-    style="background-position: center 40%;">
+
+
+ <section
+    class="bg-[url('/img/backgrounds/church_bg.jpg')] bg-cover text-white min-h-screen flex flex-col items-center justify-center text-center
+           bg-[center_45%]">
+
     <h2 data-reveal class="text-2xl md:text-4xl mb-20" style="font-family: 'Swear Display Light Cilati';">
       <div class="flex items-center justify-center gap-5">
         directions to the
       </div>
       <p class="text-5xl md:text-7xl" style="font-family: 'HeaderFont'">VENUES</p>
     </h2>
-    <div class="flex flex-col md:flex-row md:space-x-50 gap-10" style="font-family: 'Montserrat Medium'">
+    <div class="flex flex-col md:flex-row md:space-x-50 gap-10" style="font-family: 'Manrope'">
       <div>
-        <h3 class="text-sm md:text-xl">THE CEREMONY</h3>
+        <h3 class="text-sm md:text-xl" style="font-family: 'Manrope Bold'; line-height: 3;">THE CEREMONY</h3>
+
         <div class="flex flex-col">
-          <p class="text-base md:text-2xl" style="font-family: 'Lora'"><strong>ST. BENEDICT PARISH</strong></p>
-          <p class="text-base md:text-xl" style="font-family: 'Libre Baskerville Regular';">Ayala Westgrove
+          <p class="text-base md:text-2xl" style="font-family: 'Libre Baskerville Regular';"><strong>ST. BENEDICT PARISH</strong></p>
+
+          <p class="text-sm md:text-lg" style="font-family: 'Libre Baskerville Regular';">Ayala Westgrove
             Heights, South Boulevard, Silang, Cavite</p>
         </div>
         <a href="https://maps.app.goo.gl/6oRHBgGha6fQicPo8"
-          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-sm"
-          target="_blank" rel="noreferrer">GET DIRECTIONS</a>
+          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-xs md:text-sm uppercase"
+          target="_blank" rel="noreferrer" style="font-family: 'Manrope Bold'">GET DIRECTIONS</a>
       </div>
       <div>
-        <h3 class="text-sm md:text-xl">THE RECEPTION</h3>
+        <h3 class="text-sm md:text-xl" style="font-family: 'Manrope Bold'; line-height: 3;">THE RECEPTION</h3>
+
         <div class="flex flex-col">
-          <p class="text-base md:text-2xl" style="font-family: 'Lora'"><strong>ALTA VERANDA DE TIBIG</strong></p>
-          <p class="text-base md:text-xl" style="font-family: 'Libre Baskerville Regular';">Alcalde St. Brgy. Tibig,
+          <p class="text-base md:text-2xl" style="font-family: 'Libre Baskerville Regular';"><strong>ALTA VERANDA DE TIBIG<br> - PLAZA GUEVARRA</strong></p>
+
+          <p class="text-sm md:text-lg" style="font-family: 'Libre Baskerville Regular';">Alcalde St. Brgy. Tibig,
             Silang, Cavite
           </p>
         </div>
         <a href="https://maps.app.goo.gl/YAr1f6YgVdHib9RZA"
-          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-sm md:text-base"
-          target="_blank" rel="noreferrer">GET DIRECTIONS</a>
+          class="mt-2 inline-block bg-[#fffaf6] text-[#512731] px-4 py-2 rounded-full text-xs md:text-sm uppercase"
+          target="_blank" rel="noreferrer" style="font-family: 'Manrope Bold'">GET DIRECTIONS</a>
       </div>
     </div>
   </section>
 
   <!-- Dress Code Section -->
-  <section
-    class="flex flex-col bg-white min-h-screen justify-center items-center text-center text-[#4b2e2e] space-y-20 px-6 md:px-16"
-    style="font-family: 'Montserrat Medium'">
-    <div data-reveal class="flex flex-col">
-      <p class="text-4xl md:text-5xl" style="font-family: 'HeaderFont'">THE</p>
-      <p class="text-6xl md:text-7xl -mt-5" style='font-family: "Swear Display Light Cilati";'>Dress Code</p>
+<section
+  class="flex flex-col bg-[#EFE7E1] min-h-screen justify-center items-center text-center text-[#4b2e2e] 
+         px-4 sm:px-6 md:px-16 pt-16 md:pt-24 pb-10 space-y-0"
+  style="font-family: 'Manrope'">
+
+  <!-- Heading -->
+  <div data-reveal class="flex flex-col">
+    <p class="text-4xl md:text-5xl" style="font-family: 'HeaderFont'">THE</p>
+    <p class="text-6xl md:text-7xl -mt-5" style='font-family: "Swear Display Light Cilati";'>Dress Code</p>
+  </div>
+<br>
+  <!-- Guest Attire Image -->
+  <img data-reveal src="/img/guest-attire.png" alt="Guest attire"
+       class="mx-auto my-4 w-36 md:w-52 lg:w-64 object-contain" />
+
+  <!-- Dress Code Text -->
+  <div class="flex flex-col items-center text-sm md:text-lg w-full max-w-md sm:max-w-2xl md:max-w-3xl px-4 sm:px-6">
+
+    <p class="text-sm md:text-lg max-w-xl">
+      We kindly request our guests to wear formal attire.<br><br>
+      <strong>Gentlemen:</strong> beige barong with black slacks<br>
+      <strong>Ladies:</strong> long gowns or dresses in any color from our palette:
+    </p>
+
+    <!-- Color Palette Circles -->
+    <div class="flex justify-center my-6 -space-x-2 md:-space-x-3">
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#452e1e;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#733015;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#845a2d;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#541028;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#be8483;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#53503f;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#80856d;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#cfab7b;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#f4ddb4;"></div>
     </div>
-    <div class="flex flex-col items-center max-w-sm md:max-w-3xl text-sm md:text-lg">
-      <p>Please wear formal attire, and we kindly ask guests to avoid white.</p><br>
-      <p><strong>Gentlemen:</strong> Beige barong with black slacks</p>
-      <p><strong>Ladies:</strong> Long, flowy gowns or dresses</p>
-      <!-- Color Palette Circles -->
-      <div class="flex justify-center space-x-4 my-6">
-        <div class="flex justify-center space-x-2">
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#b4b29dff;"></div>
-          <!-- Sage Green -->
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#a495a8ff;"></div> <!-- Lilac -->
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#c6a4a2ff;"></div>
-          <!-- Blush Pink-->
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#e8b8acff;"></div>
-          <!-- Soft Peach -->
-          <div class="w-9 h-9 md:w-12 md:h-12 rounded-full" style="background-color:#f7e7cdff;"></div> <!-- Champagne-->
-        </div>
-      </div>
 
-      <p>Celebrate our summer wedding with us in light, soft pastel colors. Any gentle, muted shade is perfect, and
-        delicate florals are welcome.</p>
+    <p class="text-xs md:text-sm uppercase" style="font-family: 'Manrope Bold'">
+      Please reserve white for the bride.
+    </p><br>
 
-    </div>
+    <p class="text-sm md:text-lg max-w-xl">
+    Our reception will include a garden area for the cocktail hour. For comfort and safety while walking on the grass, we recommend wearing comfortable and stable heels, wedges, or flats.
+    </p>
 
+  </div>
 
+</section>
 
-    <a href="https://pin.it/6rZBNSOw1"
-      class="inline-block bg-[#512731] text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold hover:bg-[#5f3841] transition">View
-      Attire Pegs Here</a>
-  </section>
 
   <!-- A NOTE ON Gifts -->
-  <section class="min-h-screen flex items-center justify-center px-6 py-12 text-center text-[#512731]">
+  <section class="flex flex-col bg-[#EFE7E1] min-h-screen justify-center items-center px-8 md:px-16 py-12 text-center text-[#4b2e2e]">
     <div
-      class="mx-auto flex max-w-3xl flex-col items-center space-y-6 rounded-4xl border border-[#512731] bg-white/60 px-8 py-14 shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
-      style="backdrop-filter: blur(14px); font-family: 'Montserrat Medium'" :style="giftsBgStyle">
+      class="mx-auto flex max-w-3xl flex-col items-center space-y-6 rounded-4xl border border-[#512731] bg-transparent px-8 py-14 shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
+      style="font-family: 'Manrope'">
 
       <!-- Heading -->
       <div data-reveal class="flex flex-col items-center text-center">
@@ -564,20 +634,20 @@ async function submitRSVP() {
       </div>
 
       <!-- Body -->
-      <p class="text-base md:text-lg max-w-xl">
-        Your presence at our wedding is the greatest gift of all. If you wish to contribute to our future together,
-        you can do so via the QR code linked to our UnionBank account.
+      <p class="text-sm md:text-lg max-w-xl">
+        Your presence at our wedding is the greatest gift we could ask for. If you wish to contribute to our future together, a QR code linked to our UnionBank account is available below.
       </p>
 
       <!-- Button -->
       <Button as="a" href="https://drive.google.com/file/d/1TFCZm7wWcSzReCtw6GP6YAcckbTkRuRW/view?usp=sharing"
         target="_blank" rel="noreferrer"
-        class="cursor-pointer rounded-full bg-[#512731] text-white px-6 py-3 font-semibold hover:bg-[#5f3841] transition">
-        Download QR Code Here
+        class="cursor-pointer rounded-full bg-[#512731] text-white px-6 py-3 font-semibold hover:bg-[#5f3841] transition text-xs md:text-sm uppercase"
+        style="font-family: 'Manrope Bold'">
+        DOWNLOAD QR CODE HERE
       </Button>
 
       <!-- Closing -->
-      <p class="text-base md:text-lg max-w-xl">
+      <p class="text-sm md:text-lg max-w-xl">
         Your generosity will help us as we start this new chapter together, and we are deeply grateful.
       </p>
     </div>
@@ -585,12 +655,15 @@ async function submitRSVP() {
 
 
   <!-- Footer -->
-  <footer class="bg-[#512731] text-center text-white py-8 px-4 space-y-2">
-    <p class="font-script text-sm" style="font-family: 'Libre Baskerville Regular'">
-      <em>with love and gratitude,</em>
+  <footer class="bg-[#512731] text-center text-white py-8 px-8 space-y-2">
+    <p class="font-script text-sm" style="font-family: 'Manrope'">
+      For any questions, feel free to message us on our social media accounts.
     </p>
-    <p class="text-sm" style="font-family: 'Lora'">
-      <span style="font-family: 'Lora';">© 2026</span> JAY <span style="font-family: 'Arsenica Trial'">&</span> GEN
+    <br>
+    <p class="font-script text-sm" style="font-family: 'Libre Baskerville Regular'">with love and gratitude,</p>
+      
+    <p class="text-sm" style="font-family: 'Libre Baskerville Regular'">
+      <span style="font-family: 'Libre Baskerville Regular';">© 2026</span> JAY <span style="font-family: 'Arsenica Trial'">&</span> GEN
     </p>
   </footer>
 
@@ -605,13 +678,39 @@ async function submitRSVP() {
     <span class="text-2xl leading-none">↑</span>
   </button>
   <button type="button" @click="scrollToNextSection"
-    class="cursor-pointer fixed border-[1px] right-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#512731]/25 text-[#512731] shadow-2xl transition hover:-translate-y-2 hover:bg-white"
+    class="cursor-pointer fixed border-[1px] right-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#512731] text-white shadow-2xl transition hover:-translate-y-2 hover:bg-[#512731]/25"
     aria-label="Scroll to next section">
     <span class="text-2xl leading-none">↓</span>
   </button>
 </template>
 
 <style scoped>
+./* Body text — reduce size across site while leaving headings untouched */
+::v-deep(.text-xs),
+::v-deep(.text-sm),
+::v-deep(.text-base),
+::v-deep(.md\:text-lg) {
+  font-size: 9px !important;
+  line-height: 1.6 !important;
+}
+
+.drop-cap {
+  float: left;
+  font-family: 'HeaderFont';
+  font-size: 3.25rem;
+  line-height: 0.85;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  color: #4b2e2e;
+}
+
+@media (min-width: 768px) {
+  .drop-cap {
+    font-size: 5rem;
+    margin-top: 0.05rem;
+  }
+}
+
 .rsvp-pulse {
   display: inline-block;
   animation: rsvp-pulse 2.8s ease-in-out infinite;
@@ -708,11 +807,39 @@ async function submitRSVP() {
   }
 
   .hero-amp {
-    font-size: 24px;
+    font-size: 0.45em;
   }
 
   .rsvp-title {
     font-size: 2.5rem;
   }
+}
+
+/* Ampersand styling: Arsenica Trial at a smaller size than JAY/GEN */
+.hero-name {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.08em; /* tight, balanced spacing between lines */
+  line-height: 1;
+}
+
+.hero-line {
+  display: block;
+  line-height: 0.9;
+}
+
+.hero-amp {
+  font-family: 'Arsenica Trial';
+  font-size: 0.48em; /* smaller than JAY/GEN (relative to container text size) */
+  line-height: 1;
+  display: block;
+  margin: 0.05em 0;
+}
+
+@media (min-width: 768px) {
+  .hero-name { gap: 0.12em; }
+  .hero-amp { font-size: 0.5em; }
 }
 </style>

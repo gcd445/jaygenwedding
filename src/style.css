@@ -3,9 +3,17 @@
 @import 'tw-animate-css';
 
 @font-face {
-  font-family: 'Montserrat Medium';
-  src: url('/fonts/Montserrat-Medium.otf') format('opentype');
-  font-weight: 500;
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope Bold';
+  src: url('/fonts/manrope-bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
