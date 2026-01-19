@@ -404,197 +404,6 @@ async function submitRSVP() {
 </section>
 
 
-<!-- RSVP Section -->
-<section class="relative min-h-screen flex items-center justify-center px-4 md:px-0">
-  <!-- Background Image -->
-  <div
-    class="absolute inset-0 bg-cover bg-center"
-    style="background-image: url('/img/backgrounds/lian.jpg');"
-  ></div>
-
-  <!-- Optional Overlay for contrast -->
-  <div class="absolute inset-0 bg-black/10"></div>
-
-  <!-- Wrapper -->
-  <div class="px-4 sm:px-6">
-
-    <!-- RSVP Box -->
-    <div class="relative z-10 bg-[#EFE7E1] rounded-3xl shadow-[0_20px_50px_-8px_rgba(0,0,0,0.5)]
-            max-w-sm md:max-w-md
-            p-6 md:p-12 mx-auto space-y-6">
-            
-    <!-- RSVP Title -->
-    <div data-reveal class="flex items-center justify-center w-full">
-      <h2
-        class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-wide text-center"
-        style="font-family: 'HeaderFont', serif; color: #512731; line-height: 1.15;"
-      >
-      RSVP
-      </h2>
-    </div>
-
-    <!-- Blinking RSVP Prompt -->
-    <p
-      class="text-base md:text-lg text-center"
-      style="font-family: 'Manrope'; color: #512731; animation: blink 1s infinite;"
-    >
-      <div class="rsvp-pulse">Please respond by <strong>March 8</strong></div>
-    </p>
-
-    <!-- RSVP Form -->
-    <form @submit.prevent="submitRSVP" class="flex flex-col gap-4">
-      <!-- Name Fields -->
-      <div class="flex flex-col gap-4 md:flex-row">
-        <Input
-          class="border-[#512731] flex-1 text-sm md:text-lg text-[#512731]"
-          v-model="form.firstName"
-          placeholder="First Name"
-          required
-        />
-        <Input
-          class="border-[#512731] flex-1 text-sm md:text-lg text-[#512731]"
-          v-model="form.lastName"
-          placeholder="Last Name"
-          required
-        />
-      </div>
-
-      <!-- Attendance -->
-      <div class="flex items-center gap-5 flex-wrap">
-        <p class="border-[#512731] text-sm md:text-base font-medium text-[#512731]">
-          Will you attend?*
-        </p>
-        <RadioGroup
-          class="flex cursor-pointer gap-4 sm:gap-8 flex-wrap text-sm md:text-base"
-          v-model="form.attending"
-        >
-          <div class="flex items-center space-x-2">
-            <RadioGroupItem required class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
-            <Label class="cursor-pointer text-sm md:text-base text-[#512731]" for="Yes">Yes</Label>
-          </div>
-          <div class="flex items-center space-x-2">
-            <RadioGroupItem required class="border-[#512731] cursor-pointer" id="No" value="No" />
-            <Label class="cursor-pointer text-sm md:text-base text-[#512731]" for="No">No</Label>
-          </div>
-        </RadioGroup>
-      </div>
-
-      <!-- Notes and Contact -->
-      <Textarea
-        class="border-[#512731] text-sm md:text-lg text-[#512731]"
-        v-model="form.notes"
-        placeholder="Let us know any dietary notes or special requests"
-      />
-      <Input
-        class="border-[#512731] text-sm md:text-lg text-[#512731]"
-        v-model="form.contact_no"
-        placeholder="Contact Number"
-      />
-
-      <!-- Submit Button -->
-      <Button
-        type="submit"
-        class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xs md:text-sm rounded-full uppercase"
-        style="font-family: 'Manrope Bold'"
-      >
-        SUBMIT RSVP
-      </Button>
-
-      <!-- Response Message -->
-      <div
-        v-if="responseMessage"
-        class="rsvp-response mt-2"
-        :class="responseStatus === 'success' ? 'rsvp-success' : 'rsvp-alert'"
-        style="font-family: 'Manrope'; color: #512731;"
-      >
-        {{ responseMessage }}
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
-
-
-  
-
-
-<!-- Our Love Story Section -->
-<section
-  class="flex flex-col bg-[#EFE7E1]
-         justify-center items-center
-         text-[#4b2e2e]
-         px-6 md:px-16 lg:px-24
-         pt-12 md:pt-24 lg:pt-28
-         pb-20 md:pb-20 lg:pb-28">
-
-  <!-- CENTERED CONTENT BLOCK -->
-  <div class="w-full max-w-3xl lg:max-w-2xl mx-auto space-y-4">
-
-    <h2 data-reveal
-        class="rounded-lg text-3xl text-[#4b2e2e]
-               font-bold tracking-wide p-6"
-        style="font-family: 'Libre Baskerville Regular', serif">
-
-      <div class="flex flex-col items-center text-center">
-        <p class="text-5xl md:text-7xl -mt-5"
-           style='font-family: "Swear Display Light Cilati";'>
-          Our Story
-        </p>
-      </div>
-
-    </h2>
-
-    <!-- TEXT REMAINS JUSTIFIED -->
-    <div style="font-family: 'Libre Baskerville', serif;"
-     class="space-y-3 text-[13px] md:text-sm text-justify">
-
-      <p class="mb-4 leading-normal"><br>
-        <strong>WHERE IT ALL BEGAN</strong><br>
-        Jay & Gen first met in Grade 5—just familiar faces in the same circle. Years later, at a highschool dance, a photo was taken of them together. It meant nothing at the time, until Jay later made it his profile picture and caught Gen's attention. From that small spark grew playful pick-up lines, a quiet coffee after prom, and moments spent listening to music together, where sharing songs brought them closer.
-      </p>
-
-      <p class="mb-4 leading-normal">
-        <strong>CHOOSING EACH OTHER</strong><br>
-        In 2011, with patience and sincerity, Jay courted Gen, and six months later, on a rainy August evening, with Aerosmith's <em>“I Don’t Want to Miss a Thing”</em> softly playing—Gen finally said yes. Their journey as highschool sweethearts officially began, marking the start of a love that would grow stronger with time.
-      </p>
-
-      <p class="mb-4 leading-normal">
-        <strong>THE FOREVER ADVENTURE</strong><br>
-        For more than a decade, they've seen each other through milestones and challenges, late-night talks, binge-watching favorite TV shows, movie date nights, discovering new food and places across cities and countries, and all the little life moments in between. Through it all, they've remained each other's best friend—a true comfort and constant. In 2024, after asking for Gen's father's blessing a month prior, Jay proposed on their anniversary in Batangas. As the sun began to set and waves gently crashed along the shore, Gen said yes. By grace and through faith, they are now ready for the adventure of a lifetime, together.
-      </p>
-
-    </div>
-  </div>
-
-<br><br><br>
-  <!-- Compact Playlist -->
-<div class="w-full max-w-md md:max-w-lg text-center space-y-4 rounded-lg p-4 shadow-md">
-
-    <!-- Section Title -->
-    <h2 class="text-2xl md:text-3xl font-bold text-[#4b2e2e]" 
-        style="font-family: 'Headerfont';">
-      THE SOUNDTRACK
-    </h2>
-
-    <!-- Description -->
-    <p class="text-xs md:text-sm text-[#4b2e2e] leading-snug" style="font-family: 'Manrope';">
-      From the song that sealed her “yes,” through every song that marked their journey together, music has always been their love language.
-    </p>
-
-    <!-- Spotify Embed -->
-    <div class="flex justify-center">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6R3fPJ6WMjMPQ7N49obyxm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 
 
 
@@ -771,6 +580,117 @@ async function submitRSVP() {
 
 
 
+
+
+<!-- RSVP Section -->
+<section class="relative min-h-screen flex items-center justify-center px-4 md:px-0">
+  <!-- Background Image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image: url('/img/backgrounds/lian.jpg');"
+  ></div>
+
+  <!-- Optional Overlay for contrast -->
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <!-- Wrapper -->
+  <div class="px-4 sm:px-6">
+
+    <!-- RSVP Box -->
+    <div class="relative z-10 bg-[#EFE7E1] rounded-3xl shadow-[0_20px_50px_-8px_rgba(0,0,0,0.5)]
+            max-w-sm md:max-w-md
+            p-6 md:p-12 mx-auto space-y-6">
+            
+    <!-- RSVP Title -->
+    <div data-reveal class="flex items-center justify-center w-full">
+      <h2
+        class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-wide text-center"
+        style="font-family: 'HeaderFont', serif; color: #512731; line-height: 1.15;"
+      >
+      RSVP
+      </h2>
+    </div>
+
+    <!-- Blinking RSVP Prompt -->
+    <p
+      class="text-base md:text-lg text-center"
+      style="font-family: 'Manrope'; color: #512731; animation: blink 1s infinite;"
+    >
+      <div class="rsvp-pulse">Please respond by <strong>March 8</strong></div>
+    </p>
+
+    <!-- RSVP Form -->
+    <form @submit.prevent="submitRSVP" class="flex flex-col gap-4">
+      <!-- Name Fields -->
+      <div class="flex flex-col gap-4 md:flex-row">
+        <Input
+          class="border-[#512731] flex-1 text-sm md:text-lg text-[#512731]"
+          v-model="form.firstName"
+          placeholder="First Name"
+          required
+        />
+        <Input
+          class="border-[#512731] flex-1 text-sm md:text-lg text-[#512731]"
+          v-model="form.lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+
+      <!-- Attendance -->
+      <div class="flex items-center gap-5 flex-wrap">
+        <p class="border-[#512731] text-sm md:text-base font-medium text-[#512731]">
+          Will you attend?*
+        </p>
+        <RadioGroup
+          class="flex cursor-pointer gap-4 sm:gap-8 flex-wrap text-sm md:text-base"
+          v-model="form.attending"
+        >
+          <div class="flex items-center space-x-2">
+            <RadioGroupItem required class="border-[#512731] cursor-pointer" id="Yes" value="Yes" />
+            <Label class="cursor-pointer text-sm md:text-base text-[#512731]" for="Yes">Yes</Label>
+          </div>
+          <div class="flex items-center space-x-2">
+            <RadioGroupItem required class="border-[#512731] cursor-pointer" id="No" value="No" />
+            <Label class="cursor-pointer text-sm md:text-base text-[#512731]" for="No">No</Label>
+          </div>
+        </RadioGroup>
+      </div>
+
+      <!-- Notes and Contact -->
+      <Textarea
+        class="border-[#512731] text-sm md:text-lg text-[#512731]"
+        v-model="form.notes"
+        placeholder="Let us know any dietary notes or special requests"
+      />
+      <Input
+        class="border-[#512731] text-sm md:text-lg text-[#512731]"
+        v-model="form.contact_no"
+        placeholder="Contact Number"
+      />
+
+      <!-- Submit Button -->
+      <Button
+        type="submit"
+        class="cursor-pointer bg-[#512731] hover:bg-[#5f3841]/25 text-white text-xs md:text-sm rounded-full uppercase"
+        style="font-family: 'Manrope Bold'"
+      >
+        SUBMIT RSVP
+      </Button>
+
+      <!-- Response Message -->
+      <div
+        v-if="responseMessage"
+        class="rsvp-response mt-2"
+        :class="responseStatus === 'success' ? 'rsvp-success' : 'rsvp-alert'"
+        style="font-family: 'Manrope'; color: #512731;"
+      >
+        {{ responseMessage }}
+      </div>
+    </form>
+  </div>
+  </div>
+</section>
 
 
 
