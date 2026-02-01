@@ -449,10 +449,17 @@ async function submitRSVP() {
     </div>
   </section>
 
-  <!-- Dress Code Section -->
+
+
+
+
+
+
+  
+<!-- Dress Code Section -->
 <section
   class="flex flex-col bg-[#EFE7E1] min-h-screen justify-center items-center text-center text-[#4b2e2e] 
-         px-4 sm:px-6 md:px-16 pt-16 md:pt-24 pb-10 space-y-0"
+         px-4 sm:px-6 md:px-16 pt-16 md:pt-24 pb-20 sm:pb-20 md:pb-30 space-y-0"
   style="font-family: 'Manrope'">
 
   <!-- Heading -->
@@ -469,9 +476,9 @@ async function submitRSVP() {
   <div class="flex flex-col items-center text-sm md:text-lg w-full max-w-md sm:max-w-2xl md:max-w-3xl px-4 sm:px-6">
 
     <p class="text-sm md:text-lg max-w-xl">
-      We kindly request our guests to wear formal attire.<br><br>
+      We kindly request our guests to wear <strong>formal attire</strong>.<br><br>
       <strong>Gentlemen:</strong> beige barong with black slacks<br>
-      <strong>Ladies:</strong> long gowns or dresses in any color from our palette:
+      <strong>Ladies:</strong> long gowns or dresses, or a terno, in any color from our warm earth-tone palette:
     </p>
 
     <!-- Color Palette Circles -->
@@ -487,16 +494,243 @@ async function submitRSVP() {
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#f4ddb4;"></div>
     </div>
 
+<div class="mt-0 sm:mt-2 max-w-xs sm:max-w-2xl md:max-w-4xl"
+     style="font-family: 'Libre Baskerville', serif;">
+  <span class="block text-xs sm:text-xs md:text-sm italic leading-snug"
+        style="color:#4b2e2e;">
+    (Brown, Terracota, Rust, Burgundy, Dusty Rose, Mauve, Forest Green, Sage, Beige, Champagne)
+  </span>
+</div>
+
+<br>
+
     <p class="text-xs md:text-sm uppercase" style="font-family: 'Manrope Bold'">
       Please reserve white for the bride.
     </p><br>
 
     <p class="text-sm md:text-lg max-w-xl">
-    Our reception will include a garden area for the cocktail hour. For comfort and safety while walking on the grass, we recommend wearing comfortable and stable heels, wedges, or flats.
+      Our reception will include a garden area for the cocktail hour. For comfort and safety while walking on the grass, we recommend wearing comfortable and stable heels, wedges, or flats.
     </p>
 
   </div>
 </section>
+
+
+
+
+ <!-- THE ENTOURAGE SECTION -->
+<section
+  class="flex flex-col min-h-screen justify-center items-center text-center
+         px-4 sm:px-6 md:px-20 lg:px-28
+         pt-12 md:pt-28 pb-10 md:pb-14
+         text-[#fffaf6]"
+  style="
+    font-family:'Manrope';
+    background-color:#7d6960;
+  ">
+
+  <!-- Heading -->
+  <div data-reveal class="flex flex-col mb-12 md:mb-24">
+    <p class="text-4xl md:text-5xl leading-none"
+       style="font-family:'HeaderFont'">THE</p>
+
+    <p class="text-6xl md:text-7xl -mt-4 leading-none"
+       style="font-family:'Swear Display Light Cilati';">
+      Entourage
+    </p>
+  </div>
+
+  <!-- Parents -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
+              grid grid-cols-2 gap-x-6 md:gap-x-20 mb-10 md:mb-14"
+       style="font-family:'Libre Baskerville',serif;">
+    <div>
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">
+        PARENTS OF THE GROOM
+      </span>
+      <span class="text-[0.55rem] md:text-sm leading-[1.2] md:leading-[1.3] block whitespace-nowrap">
+        <em>Engr. Jaime Lozo Jr. †</em>
+      </span>
+      <span class="text-[0.55rem] md:text-sm leading-[1.2] md:leading-[1.3] block whitespace-nowrap">
+        <em>Mrs. Lolita Lozo</em>
+      </span>
+    </div>
+
+    <div>
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">
+        PARENTS OF THE BRIDE
+      </span>
+      <span class="text-[0.55rem] md:text-sm leading-[1.2] md:leading-[1.3] block whitespace-nowrap">
+        <em>Engr. Raul Luis Dannang</em>
+      </span>
+      <span class="text-[0.55rem] md:text-sm leading-[1.2] md:leading-[1.3] block whitespace-nowrap">
+        <em>Dr. Rita Dannang</em>
+      </span>
+    </div>
+  </div>
+
+  <!-- Principal Sponsors -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto mb-3"
+       style="font-family:'Libre Baskerville',serif;">
+    <span class="text-[0.55rem] md:text-xs font-semibold block">
+      PRINCIPAL SPONSORS
+    </span>
+  </div>
+
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
+              grid grid-cols-2 gap-x-6 md:gap-x-20
+              text-[0.55rem] md:text-sm
+              leading-[1.2] md:leading-[1.3]
+              font-serif mb-10 md:mb-14">
+    <div class="text-right space-y-[0.1rem] md:space-y-[0.15rem]">
+      <p class="whitespace-nowrap"><em>Capt. Isagani Fiñones</em></p>
+      <p class="whitespace-nowrap"><em>Engr. Eriel Casapao</em></p>
+      <p class="whitespace-nowrap"><em>Engr. Daniel Peckley</em></p>
+      <p class="whitespace-nowrap"><em>Atty. Rommel Camarillo</em></p>
+      <p class="whitespace-nowrap"><em>Mr. Braxton Dannang</em></p>
+      <p class="whitespace-nowrap"><em>Mr. Romel Bagtang</em></p>
+      <p class="whitespace-nowrap"><em>Mr. Alfred Mayor</em></p>
+      <p class="whitespace-nowrap"><em>Mr. Elberto Padilla</em></p>
+      <p class="whitespace-nowrap"><em>Mr. Tito Cabrera</em></p>
+      <p class="whitespace-nowrap"><em>Mr. Cesar Maulion</em></p>
+    </div>
+
+    <div class="text-left space-y-[0.1rem] md:space-y-[0.15rem]">
+      <p class="whitespace-nowrap"><em>Mrs. Anisia Fiñones</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Ella Claver-Baldwin</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Silahis Peckley</em></p>
+      <p class="whitespace-nowrap"><em>Atty. Beryl Camarillo</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Milagros Endo</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Marivic Bagtang</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Mary Frances Cruz-Mayor</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Lerma Maulion-Alcañices</em></p>
+      <p class="whitespace-nowrap"><em>Engr. Lani Maulion-Cabrera</em></p>
+      <p class="whitespace-nowrap"><em>Engr. Leila Maulion</em></p>
+    </div>
+  </div>
+
+  <!-- Best Man & Matron of Honor -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
+              grid grid-cols-2 gap-x-6 md:gap-x-20 mb-10 md:mb-14"
+       style="font-family:'Libre Baskerville',serif;">
+    <div>
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">
+        BEST MAN
+      </span>
+      <span class="text-[0.55rem] md:text-sm leading-[1.2] md:leading-[1.3] block whitespace-nowrap">
+        <em>Dr. Jaime David Lozo III</em>
+      </span>
+    </div>
+
+    <div>
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">
+        MATRON OF HONOR
+      </span>
+      <span class="text-[0.55rem] md:text-sm leading-[1.2] md:leading-[1.3] block whitespace-nowrap">
+        <em>Mrs. Gretchen Dannang-Taguba</em>
+      </span>
+    </div>
+  </div>
+
+  <!-- Secondary Sponsors -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto mb-3"
+       style="font-family:'Libre Baskerville',serif;">
+    <span class="text-[0.55rem] md:text-xs font-semibold block">
+      SECONDARY SPONSORS
+    </span>
+  </div>
+
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
+            grid grid-cols-3 gap-x-3 md:gap-x-16
+            px-2 sm:px-0
+            mb-10 md:mb-14 text-center"
+     style="font-family:'Libre Baskerville',serif;">
+    <div class="leading-[1.2] md:leading-[1.3]">
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">CANDLE</span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Mr. Miguel Gutierrez</em></span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Ms. Jelena Kristel Lozo</em></span>
+    </div>
+    <div class="leading-[1.2] md:leading-[1.3]">
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">VEIL</span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Mr. Romwell Alcañices</em></span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Ms. Marlene Mejia</em></span>
+    </div>
+    <div class="leading-[1.2] md:leading-[1.3]">
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">CORD</span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Mr. Gideon Dannang</em></span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Dr. Chesca Cabrera-Tarriela</em></span>
+    </div>
+  </div>
+
+  <!-- Groomsmen & Bridesmaids -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto mb-3"
+       style="font-family:'Libre Baskerville',serif;">
+    <span class="text-[0.55rem] md:text-xs font-semibold block">
+      GROOMSMEN & BRIDESMAIDS
+    </span>
+  </div>
+
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
+              grid grid-cols-2 gap-x-6 md:gap-x-20
+              text-[0.55rem] md:text-sm
+              leading-[1.2] md:leading-[1.3]
+              font-serif mb-10 md:mb-14">
+    <div class="text-right space-y-[0.1rem] md:space-y-[0.15rem]">
+      <p class="whitespace-nowrap"><em>Benjamin Santiaguel III</em></p>
+      <p class="whitespace-nowrap"><em>Gabriel Lorenzo Paz</em></p>
+      <p class="whitespace-nowrap"><em>John Carlo Viceral</em></p>
+      <p class="whitespace-nowrap"><em>Ayrton Tornito</em></p>
+      <p class="whitespace-nowrap"><em>Roel Trinidad</em></p>
+      <p class="whitespace-nowrap"><em>Kenneth Mayor</em></p>
+      <p class="whitespace-nowrap"><em>Jose Mario Dacanay</em></p>
+      <p class="whitespace-nowrap"><em>Judd Rojas</em></p>
+    </div>
+
+    <div class="text-left space-y-[0.1rem] md:space-y-[0.15rem]">
+      <p class="whitespace-nowrap"><em>Kryzhia Rodriguez</em></p>
+      <p class="whitespace-nowrap"><em>Jazzlynne Vette Mariano</em></p>
+      <p class="whitespace-nowrap"><em>Alisha Marie Timbol</em></p>
+      <p class="whitespace-nowrap"><em>Alena Lasac</em></p>
+      <p class="whitespace-nowrap"><em>Shane Allison Buensuceso</em></p>
+      <p class="whitespace-nowrap"><em>Alia Paulyn Dalusung</em></p>
+      <p class="whitespace-nowrap"><em>Oshin Ann Sakaguchi</em></p>
+      <p class="whitespace-nowrap"><em>Kristina Mae Pallagud</em></p>
+    </div>
+  </div>
+
+  <!-- Bearers -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
+              grid grid-cols-3 gap-x-3 md:gap-x-16 mb-10 md:mb-14 text-center"
+       style="font-family:'Libre Baskerville',serif;">
+    <div class="leading-[1.2] md:leading-[1.3]">
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">RING BEARER</span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Iñigo Lorenzo Taguba</em></span>
+    </div>
+    <div class="leading-[1.2] md:leading-[1.3]">
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">COIN BEARER</span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Ash Alcañices</em></span>
+    </div>
+    <div class="leading-[1.2] md:leading-[1.3]">
+      <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">BIBLE BEARER</span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Zyron Jacob Lozo</em></span>
+    </div>
+  </div>
+
+  <!-- Flower Girl -->
+  <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto"
+       style="font-family:'Libre Baskerville',serif;">
+    <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">
+      FLOWER GIRL
+    </span>
+    <span class="text-[0.55rem] md:text-sm block whitespace-nowrap">
+      <em>Athena Ellise Lozo</em>
+    </span>
+  </div>
+
+</section>
+
+
+
 
 
 
@@ -512,8 +746,8 @@ async function submitRSVP() {
 
   <!-- Bottom Right Floral (rotated for balance) -->
   <img src="/img/roses2.png" alt="Bottom right floral"
-    class="absolute bottom-0 right-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0"
-    style="transform: rotate(180deg)" />
+    class="absolute right-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0"
+    style="transform: rotate(180deg); bottom: 0;" />
 
   <!-- FAQ Content -->
   <div class="w-full max-w-3xl lg:max-w-2xl xl:max-w-3xl space-y-6">
