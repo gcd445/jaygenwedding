@@ -31,22 +31,9 @@ jobs:
       - name: Run build
         run: pnpm run build
 
-      - name: Update Cloudflare DNS
-        run: |
-          curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/dns_records/${{ secrets.CF_RECORD_ID }}" \
-            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            --data '{
-              "type": "CNAME",
-              "name": "www.jaygenwedding.com",
-              "content": "gcd445.github.io",
-              "ttl": 120,
-              "proxied": false
-            }'
-        env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
-          CF_RECORD_ID: ${{ secrets.CF_RECORD_ID }}
+
+      - name: Set CNAME for GitHub Pages
+        run: echo 'jaygenwedding.com' > dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
