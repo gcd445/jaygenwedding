@@ -463,14 +463,22 @@ async function submitRSVP() {
   style="font-family: 'Manrope'">
 
   <!-- Heading -->
-  <div data-reveal class="flex flex-col">
-    <p class="text-4xl md:text-5xl" style="font-family: 'HeaderFont'">THE</p>
-    <p class="text-6xl md:text-7xl -mt-5" style='font-family: "Swear Display Light Cilati";'>Dress Code</p>
-  </div>
-<br>
-  <!-- Guest Attire Image -->
+<div data-reveal class="flex flex-col mb-6 md:mb-16">
+  <p class="text-3xl md:text-5xl leading-none"
+     style="font-family:'HeaderFont'">
+    THE
+  </p>
+
+  <p class="text-5xl md:text-7xl -mt-2 md:-mt-4 leading-none"
+     style="font-family:'Swear Display Light Cilati';">
+    Dress Code
+  </p>
+</div>
+
+<!-- Guest Attire Image -->
 <img data-reveal src="/img/guest-attire.png" alt="Guest attire"
-     class="mx-auto my-4 w-36 md:w-48 lg:w-56 object-contain" />
+     class="mx-auto mt-2 md:mt-4 w-36 md:w-48 lg:w-56 object-contain" />
+     <br>
 
   <!-- Dress Code Text -->
   <div class="flex flex-col items-center text-sm md:text-lg w-full max-w-md sm:max-w-2xl md:max-w-3xl px-4 sm:px-6">
@@ -483,13 +491,11 @@ async function submitRSVP() {
 
     <!-- Color Palette Circles -->
     <div class="flex justify-center my-6 -space-x-2 md:-space-x-3">
-      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#452e1e;"></div>
-      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#733015;"></div>
-      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#845a2d;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#6f4e37;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#79301f;"></div>
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#541028;"></div>
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#be8483;"></div>
-      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#53503f;"></div>
-      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#80856d;"></div>
+      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#52451b;"></div>
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#cfab7b;"></div>
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#f4ddb4;"></div>
     </div>
@@ -498,7 +504,7 @@ async function submitRSVP() {
      style="font-family: 'Libre Baskerville', serif;">
   <span class="block text-xs sm:text-xs md:text-sm italic leading-snug"
         style="color:#4b2e2e;">
-    (Brown, Terracota, Rust, Burgundy, Dusty Rose, Mauve, Forest Green, Sage, Beige, Champagne)
+    (Brown, Terracota, Burgundy, Dusty Rose, Olive Green, Beige, Champagne)
   </span>
 </div>
 
@@ -506,10 +512,6 @@ async function submitRSVP() {
 
     <p class="text-xs md:text-sm uppercase" style="font-family: 'Manrope Bold'">
       Please reserve white for the bride.
-    </p><br>
-
-    <p class="text-sm md:text-lg max-w-xl">
-      Our reception will include a garden area for the cocktail hour. For comfort and safety while walking on the grass, we recommend wearing comfortable and stable heels, wedges, or flats.
     </p>
 
   </div>
@@ -518,27 +520,51 @@ async function submitRSVP() {
 
 
 
- <!-- THE ENTOURAGE SECTION -->
+<!-- THE ENTOURAGE SECTION -->
 <section
   class="flex flex-col min-h-screen justify-center items-center text-center
          px-4 sm:px-6 md:px-20 lg:px-28
-         pt-12 md:pt-28 pb-10 md:pb-14
-         text-[#fffaf6]"
+         pt-12 md:pt-28 pb-10 md:pb-14"
   style="
     font-family:'Manrope';
     background-color:#7d6960;
   ">
 
-  <!-- Heading -->
-  <div data-reveal class="flex flex-col mb-12 md:mb-24">
-    <p class="text-4xl md:text-5xl leading-none"
-       style="font-family:'HeaderFont'">THE</p>
+  <!-- Paper Container -->
+  <div
+    class="relative w-full max-w-6xl
+           bg-[#EFE7E1]
+           text-[#4b2e2e]
+           px-6 sm:px-10 md:px-16
+           py-10 md:py-16
+           rounded-sm
+           shadow-[0_18px_45px_rgba(0,0,0,0.25)]
+           overflow-hidden">
 
-    <p class="text-6xl md:text-7xl -mt-4 leading-none"
-       style="font-family:'Swear Display Light Cilati';">
-      Entourage
-    </p>
-  </div>
+    <!-- Subtle paper texture -->
+    <div
+      class="pointer-events-none absolute inset-0
+             bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px)]
+             bg-[length:100%_26px]
+             opacity-[0.35]">
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center">
+
+
+  <!-- Heading -->
+<div data-reveal class="flex flex-col mb-10 md:mb-24">
+  <p class="text-3xl md:text-5xl leading-none"
+     style="font-family:'HeaderFont'">
+    THE
+  </p>
+
+  <p class="text-5xl md:text-7xl -mt-2 md:-mt-4 leading-none"
+     style="font-family:'Swear Display Light Cilati';">
+    Entourage
+  </p>
+</div>
 
   <!-- Parents -->
   <div class="max-w-xs sm:max-w-3xl md:max-w-6xl mx-auto
@@ -602,9 +628,9 @@ async function submitRSVP() {
       <p class="whitespace-nowrap"><em>Atty. Beryl Camarillo</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Milagros Endo</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Marivic Bagtang</em></p>
-      <p class="whitespace-nowrap"><em>Mrs. Mary Frances Cruz-Mayor</em></p>
-      <p class="whitespace-nowrap"><em>Mrs. Lerma Maulion-Alcañices</em></p>
-      <p class="whitespace-nowrap"><em>Engr. Lani Maulion-Cabrera</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Frances Mayor</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Lerma Alcañices</em></p>
+      <p class="whitespace-nowrap"><em>Engr. Lani Cabrera</em></p>
       <p class="whitespace-nowrap"><em>Engr. Leila Maulion</em></p>
     </div>
   </div>
@@ -657,8 +683,8 @@ async function submitRSVP() {
     </div>
     <div class="leading-[1.2] md:leading-[1.3]">
       <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">CORD</span>
-      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Mr. Gideon Dannang</em></span>
-      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Dr. Chesca Cabrera-Tarriela</em></span>
+      <span class="text-[0.55rem] md:text-sm block break-words"><em>Mr. Gideon Dannang</em></span>
+      <span class="text-[0.55rem] md:text-sm block break-words"><em>Dr. Chesca Tarriela</em></span>
     </div>
   </div>
 
@@ -677,24 +703,24 @@ async function submitRSVP() {
               font-serif mb-10 md:mb-14">
     <div class="text-right space-y-[0.1rem] md:space-y-[0.15rem]">
       <p class="whitespace-nowrap"><em>Benjamin Santiaguel III</em></p>
-      <p class="whitespace-nowrap"><em>Gabriel Lorenzo Paz</em></p>
-      <p class="whitespace-nowrap"><em>John Carlo Viceral</em></p>
+      <p class="whitespace-nowrap"><em>Gabriel Paz</em></p>
+      <p class="whitespace-nowrap"><em>Carlo Viceral</em></p>
       <p class="whitespace-nowrap"><em>Ayrton Tornito</em></p>
       <p class="whitespace-nowrap"><em>Roel Trinidad</em></p>
       <p class="whitespace-nowrap"><em>Kenneth Mayor</em></p>
-      <p class="whitespace-nowrap"><em>Jose Mario Dacanay</em></p>
+      <p class="whitespace-nowrap"><em>Mario Dacanay</em></p>
       <p class="whitespace-nowrap"><em>Judd Rojas</em></p>
     </div>
 
     <div class="text-left space-y-[0.1rem] md:space-y-[0.15rem]">
       <p class="whitespace-nowrap"><em>Kryzhia Rodriguez</em></p>
-      <p class="whitespace-nowrap"><em>Jazzlynne Vette Mariano</em></p>
-      <p class="whitespace-nowrap"><em>Alisha Marie Timbol</em></p>
+      <p class="whitespace-nowrap"><em>Jazzlynne Mariano</em></p>
+      <p class="whitespace-nowrap"><em>Alisha Timbol</em></p>
       <p class="whitespace-nowrap"><em>Alena Lasac</em></p>
-      <p class="whitespace-nowrap"><em>Shane Allison Buensuceso</em></p>
-      <p class="whitespace-nowrap"><em>Alia Paulyn Dalusung</em></p>
-      <p class="whitespace-nowrap"><em>Oshin Ann Sakaguchi</em></p>
-      <p class="whitespace-nowrap"><em>Kristina Mae Pallagud</em></p>
+      <p class="whitespace-nowrap"><em>Shane Buensuceso</em></p>
+      <p class="whitespace-nowrap"><em>Alia Dalusung</em></p>
+      <p class="whitespace-nowrap"><em>Oshin Sakaguchi</em></p>
+      <p class="whitespace-nowrap"><em>Kristina Pallagud</em></p>
     </div>
   </div>
 
@@ -727,6 +753,8 @@ async function submitRSVP() {
     </span>
   </div>
 
+</div>
+</div>
 </section>
 
 
@@ -770,7 +798,7 @@ async function submitRSVP() {
       Can I bring a plus one or additional guest?
     </span><br>
     <span style="font-family: 'Manrope', sans-serif;">
-      While we'd love to celebrate with everyone, to keep our gathering small and intimate, we're only able to accommodate guests who are formally invited. We appreciate your understanding and your warm wishes!
+      While we'd like to accommodate everyone, we're limited to a certain number of guests. We appreciate your understanding and your warm wishes!
     </span>
   </p>
 
@@ -831,7 +859,7 @@ async function submitRSVP() {
   <div class="px-4 sm:px-6">
 
     <!-- RSVP Box -->
-    <div class="relative z-10 bg-[#EFE7E1] rounded-3xl shadow-[0_20px_50px_-8px_rgba(0,0,0,0.5)]
+    <div class="relative z-10 bg-[#EFE7E1] rounded-sm shadow-[0_20px_50px_-8px_rgba(0,0,0,0.5)]
             max-w-sm md:max-w-md
             p-6 md:p-12 mx-auto space-y-6">
             
