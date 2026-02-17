@@ -625,7 +625,7 @@ async function submitRSVP() {
       <p class="whitespace-nowrap"><em>Mrs. Anisia Fiñones</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Ella Claver-Baldwin</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Silahis Peckley</em></p>
-      <p class="whitespace-nowrap"><em>Atty. Beryl Camarillo</em></p>
+      <p class="whitespace-nowrap"><em>Atty. Beryl Vergara</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Milagros Endo</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Marivic Bagtang</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Frances Mayor</em></p>
@@ -674,7 +674,7 @@ async function submitRSVP() {
     <div class="leading-[1.2] md:leading-[1.3]">
       <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">CANDLE</span>
       <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Mr. Miguel Gutierrez</em></span>
-      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Ms. Jelena Kristel Lozo</em></span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Dr. Chesca Tarriela</em></span>
     </div>
     <div class="leading-[1.2] md:leading-[1.3]">
       <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">VEIL</span>
@@ -684,7 +684,7 @@ async function submitRSVP() {
     <div class="leading-[1.2] md:leading-[1.3]">
       <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">CORD</span>
       <span class="text-[0.55rem] md:text-sm block break-words"><em>Mr. Gideon Dannang</em></span>
-      <span class="text-[0.55rem] md:text-sm block break-words"><em>Dr. Chesca Tarriela</em></span>
+      <span class="text-[0.55rem] md:text-sm block break-words"><em>Ms. Jelena Kristel Lozo</em></span>
     </div>
   </div>
 
