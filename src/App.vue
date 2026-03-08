@@ -497,14 +497,13 @@ async function submitRSVP() {
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#be8483;"></div>
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#52451b;"></div>
       <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#cfab7b;"></div>
-      <div class="w-10 h-10 md:w-12 md:h-12 rounded-full" style="background-color:#f4ddb4;"></div>
     </div>
 
 <div class="mt-0 sm:mt-2 max-w-xs sm:max-w-2xl md:max-w-4xl"
      style="font-family: 'Libre Baskerville', serif;">
   <span class="block text-xs sm:text-xs md:text-sm italic leading-snug"
         style="color:#4b2e2e;">
-    (Brown, Terracota, Burgundy, Dusty Rose, Olive Green, Beige, Champagne)
+    (Brown, Terracota, Burgundy, Dusty Rose, Olive Green, Beige)
   </span>
 </div>
 
@@ -610,9 +609,10 @@ async function submitRSVP() {
               font-serif mb-10 md:mb-14">
     <div class="text-right space-y-[0.1rem] md:space-y-[0.15rem]">
       <p class="whitespace-nowrap"><em>Capt. Isagani Fiñones</em></p>
+      <p class="whitespace-nowrap"><em>Judge Edgardo Padilla</em></p>
       <p class="whitespace-nowrap"><em>Engr. Eriel Casapao</em></p>
       <p class="whitespace-nowrap"><em>Engr. Daniel Peckley</em></p>
-      <p class="whitespace-nowrap"><em>Atty. Rommel Camarillo</em></p>
+      <p class="whitespace-nowrap"><em>Atty. Rommelo Camarillo</em></p>
       <p class="whitespace-nowrap"><em>Mr. Braxton Dannang</em></p>
       <p class="whitespace-nowrap"><em>Mr. Romel Bagtang</em></p>
       <p class="whitespace-nowrap"><em>Mr. Alfred Mayor</em></p>
@@ -623,6 +623,7 @@ async function submitRSVP() {
 
     <div class="text-left space-y-[0.1rem] md:space-y-[0.15rem]">
       <p class="whitespace-nowrap"><em>Mrs. Anisia Fiñones</em></p>
+      <p class="whitespace-nowrap"><em>Mrs. Elenor Andal</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Ella Claver-Baldwin</em></p>
       <p class="whitespace-nowrap"><em>Mrs. Silahis Peckley</em></p>
       <p class="whitespace-nowrap"><em>Atty. Beryl Vergara</em></p>
@@ -703,20 +704,20 @@ async function submitRSVP() {
               font-serif mb-10 md:mb-14">
     <div class="text-right space-y-[0.1rem] md:space-y-[0.15rem]">
       <p class="whitespace-nowrap"><em>Benjamin Santiaguel III</em></p>
+      <p class="whitespace-nowrap"><em>Roel Trinidad</em></p>
       <p class="whitespace-nowrap"><em>Gabriel Paz</em></p>
       <p class="whitespace-nowrap"><em>Carlo Viceral</em></p>
       <p class="whitespace-nowrap"><em>Ayrton Tornito</em></p>
-      <p class="whitespace-nowrap"><em>Roel Trinidad</em></p>
       <p class="whitespace-nowrap"><em>Kenneth Mayor</em></p>
       <p class="whitespace-nowrap"><em>Mario Dacanay</em></p>
       <p class="whitespace-nowrap"><em>Judd Rojas</em></p>
     </div>
 
     <div class="text-left space-y-[0.1rem] md:space-y-[0.15rem]">
-      <p class="whitespace-nowrap"><em>Kryzhia Rodriguez</em></p>
+      <p class="whitespace-nowrap"><em>Alena Lasac</em></p>
+       <p class="whitespace-nowrap"><em>Kryzhia Rodriguez</em></p>
       <p class="whitespace-nowrap"><em>Jazzlynne Mariano</em></p>
       <p class="whitespace-nowrap"><em>Alisha Timbol</em></p>
-      <p class="whitespace-nowrap"><em>Alena Lasac</em></p>
       <p class="whitespace-nowrap"><em>Shane Buensuceso</em></p>
       <p class="whitespace-nowrap"><em>Alia Dalusung</em></p>
       <p class="whitespace-nowrap"><em>Oshin Sakaguchi</em></p>
@@ -734,7 +735,7 @@ async function submitRSVP() {
     </div>
     <div class="leading-[1.2] md:leading-[1.3]">
       <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">COIN BEARER</span>
-      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Ash Alcañices</em></span>
+      <span class="text-[0.55rem] md:text-sm block whitespace-nowrap"><em>Rhys Azriel Alcañices</em></span>
     </div>
     <div class="leading-[1.2] md:leading-[1.3]">
       <span class="text-[0.55rem] md:text-xs font-semibold block mb-1">BIBLE BEARER</span>
@@ -800,6 +801,7 @@ async function submitRSVP() {
     <span style="font-family: 'Manrope', sans-serif;">
       While we'd like to accommodate everyone, we're limited to a certain number of guests. We appreciate your understanding and your warm wishes!
     </span>
+    <br><br>
   </p>
 
   <p class="text-sm md:text-lg mb-6 leading-normal">
@@ -809,7 +811,21 @@ async function submitRSVP() {
     <span style="font-family: 'Manrope', sans-serif;">
       Yes, parking is available at both St. Benedict Parish and Alta Veranda de Tibig. For convenience, we still suggest arriving a bit early or carpooling if possible.
     </span>
+    <br><br>
   </p>
+
+
+ <p class="text-sm md:text-lg mb-6 leading-normal">
+    <span style="font-family: 'Libre Baskerville', serif; font-weight: bold; font-style: italic;">
+      Is there a wedding hashtag?
+    </span><br>
+    <span style="font-family: 'Manrope', sans-serif;">
+    Yes! Fun fact: The digits of our wedding date, <span style="font-family: 'Libre Baskerville', serif; font-style: italic">0 4 2 8 2 0 2 6</span>, add up to <span style="font-family: 'Libre Baskerville', serif; font-style: italic">24</span> — just like our anniversary! 
+    <br>📸 Share your memories with <span style="font-family: 'Libre Baskerville', serif; font-weight: bold; font-style: italic">#JayGen24Ever</span> 💫
+    </span>
+    <br><br>
+  </p>  
+
 
   <p class="text-sm md:text-lg mb-6 leading-normal">
     <span style="font-family: 'Libre Baskerville', serif; font-weight: bold; font-style: italic;">
@@ -833,6 +849,7 @@ async function submitRSVP() {
     <span style="font-family: 'Manrope', sans-serif;">
       Your generosity will help us as we start this new chapter together, and we are deeply grateful.
     </span>
+    <br><br>
   </p>
 
 </div>
@@ -964,8 +981,9 @@ async function submitRSVP() {
       For any questions, feel free to message us on our social media accounts.
     </p>
     <br>
-    <p class="font-script text-sm" style="font-family: 'Libre Baskerville Regular'">with love and gratitude,</p>
-      
+    <p class="font-script text-sm" style="font-family: 'Libre Baskerville Regular'">
+      with love and gratitude,
+    </p>
     <p class="text-sm" style="font-family: 'Libre Baskerville Regular'">
       © 2026 JAY & GEN
     </p>
