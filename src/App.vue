@@ -337,13 +337,23 @@ async function submitRSVP() {
 
 
 
+
+
 <section
-  class="flex flex-col bg-[#EFE7E1] min-h-screen justify-center items-center text-center text-[#4b2e2e] space-y-12 md:space-y-16 px-6 md:px-16 lg:px-72 xl:px-88"
-  style="font-family: 'Manrope'">
-  
-  <!-- Floral Artwork with top margin on desktop -->
-  <img data-reveal src="/img/roses1.png" alt="Floral artwork"
-       class="block mx-auto w-80 md:w-100 mt-8 md:mt-16"/>
+  class="bg-[url('/img/PAM2003.jpg')] 
+         bg-cover 
+         bg-[center_70%] md:bg-[center_45%] 
+         text-white min-h-screen 
+         flex flex-col items-center justify-center 
+         text-center text-[#4b2e2e] 
+         space-y-12 md:space-y-16 
+         px-6 md:px-16 lg:px-72 xl:px-88
+         lg:pt-30" 
+  style="font-family: 'Manrope';"
+>
+
+
+
 
   <!-- Countdown Timer with responsive sizing and spacing -->
   <div data-reveal 
@@ -392,7 +402,6 @@ async function submitRSVP() {
   </p>
       
   </div>
-
     <!-- Signature -->
     <div class="flex flex-col items-center mb-12 md:mb-20">
       <p class="font-script text-sm md:text-lg" style="font-family: 'Libre Baskerville Regular'; line-height: 1.5;">with love,</p>
@@ -402,9 +411,6 @@ async function submitRSVP() {
     </div>
     
 </section>
-
-
-
 
 
 
@@ -485,7 +491,7 @@ async function submitRSVP() {
 
     <p class="text-sm md:text-lg max-w-xl">
       We kindly request our guests to wear <strong>formal attire</strong>.<br><br>
-      <strong>Gentlemen:</strong> beige barong with black slacks<br>
+      <strong>Gentlemen:</strong> Beige barong with black slacks <br>(long-sleeves, regular collar; no Chinese collar—for the groom only; no colored embroidery)<br>
       <strong>Ladies:</strong> long gowns or dresses, or a terno, in any color from our warm earth-tone palette:
     </p>
 
@@ -763,20 +769,109 @@ async function submitRSVP() {
 
 
 
+<!-- Our Love Story Section -->
+<section
+  class="flex flex-col bg-[#EFE7E1]
+         justify-center items-center
+         text-[#4b2e2e]
+         px-6 md:px-16 lg:px-24
+         pt-12 md:pt-24 lg:pt-28
+         pb-20 md:pb-20 lg:pb-28">
+
+  <!-- TWO COLUMN LAYOUT -->
+  <div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+    <!-- LEFT SIDE: PHOTO -->
+    <div class="w-full flex justify-center lg:justify-start">
+      <img data-reveal src="/img/NOL2337.jpg"
+           alt="Our Story Photo"
+           class="w-full max-w-md lg:max-w-full h-auto rounded-sm shadow-md object-cover">
+    </div>
+
+    <!-- RIGHT SIDE: TEXT CONTENT -->
+    <div class="space-y-4">
+
+      <h2 data-reveal
+          class="rounded-lg text-3xl text-[#4b2e2e]
+                 font-bold tracking-wide p-2"
+          style="font-family: 'Libre Baskerville Regular', serif">
+
+        <div class="flex flex-col items-start text-left mb-8">
+  <p class="text-5xl md:text-7xl"
+     style='font-family: "Swear Display Light Cilati";'>
+    Our Story
+  </p>
+</div>
+
+      </h2>
+
+      <!-- TEXT -->
+      <div style="font-family: 'Libre Baskerville', serif;"
+           class="space-y-3 text-[13px] md:text-sm text-justify">
+
+        <p class="mb-4 leading-normal">
+          <strong>WHERE IT ALL BEGAN</strong><br>
+          Jay & Gen first met in Grade 5—just familiar faces in the same circle. Years later, at a highschool dance, they took a photo together. It meant nothing at the time, until Jay later made it his profile picture and caught Gen's attention. From that small spark grew playful pick-up lines, a quiet coffee after prom, and moments spent listening to music together, where sharing songs brought them closer.
+        </p>
+
+        <p class="mb-4 leading-normal">
+          <strong>CHOOSING EACH OTHER</strong><br>
+          In 2011, Jay courted Gen, and six months later, on a rainy August evening, with Aerosmith's <em>“I Don’t Want to Miss a Thing”</em> softly playing—Gen finally said yes. Their journey as highschool sweethearts officially began, marking the start of a love that would grow stronger with time.
+        </p>
+
+        <p class="mb-4 leading-normal">
+          <strong>THE FOREVER ADVENTURE</strong><br>
+          For more than a decade, they've seen each other through milestones and challenges, movie dates, binge-watching TV series, discovering new food and places across cities and countries, and all the little life moments in between. Through it all, they've remained each other's best friend—a true comfort and constant. In 2024, after asking for Gen's father's blessing a month prior, Jay proposed on their anniversary in Batangas. As the sun began to set and waves gently crashed along the shore, Gen said yes. By grace and through faith, they are now ready for the adventure of a lifetime, together.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Spotify Playlist Section -->
+<section
+  class="bg-[url('/img/ROSES.jpg')] bg-center bg-cover
+         text-[#4b2e2e] flex flex-col items-center justify-center 
+         min-h-[400px] md:min-h-[500px] px-6 md:px-16 lg:px-72 xl:px-88
+         py-12 md:py-16 space-y-6"
+  style="font-family: 'Manrope';"
+>
+
+  <div class="w-full max-w-md md:max-w-lg text-center space-y-4 p-4 rounded-lg shadow-md bg-[#EFE7E1]">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#4b2e2e]" 
+        style="font-family: 'Headerfont';">
+      THE SOUNDTRACK
+    </h2>
+
+    <p class="text-xs md:text-sm text-[#4b2e2e] leading-snug" style="font-family: 'Manrope';">
+      From the song that sealed her “yes,” through every song that marked their journey together, music has always been their love language.
+    </p>
+
+    <div class="flex justify-center">
+      <iframe data-testid="embed-iframe" style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/6R3fPJ6WMjMPQ7N49obyxm?utm_source=generator&theme=0"
+        width="100%" height="152" frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 <!-- FAQ Section -->
 <section
   class="relative bg-[#EFE7E1] min-h-screen flex flex-col items-center justify-center
          px-6 md:px-16 lg:px-72 xl:px-88
          py-12 text-center space-y-8 text-[#4b2e2e]">
-
-  <!-- Top Left Floral -->
-  <img src="/img/roses2.png" alt="Top left floral"
-    class="absolute top-0 left-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0" />
-
-  <!-- Bottom Right Floral (rotated for balance) -->
-  <img src="/img/roses2.png" alt="Bottom right floral"
-    class="absolute right-0 w-30 lg:w-80 pointer-events-none opacity-100 z-0"
-    style="transform: rotate(180deg); bottom: 0;" />
 
   <!-- FAQ Content -->
   <div class="w-full max-w-3xl lg:max-w-2xl xl:max-w-3xl space-y-6">
@@ -866,7 +961,7 @@ async function submitRSVP() {
   <!-- Background Image -->
   <div
     class="absolute inset-0 bg-cover bg-center"
-    style="background-image: url('/img/backgrounds/lian.jpg');"
+    style="background-image: url('/img/PINE2.jpg');"
   ></div>
 
   <!-- Optional Overlay for contrast -->
